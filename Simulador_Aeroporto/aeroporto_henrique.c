@@ -26,6 +26,18 @@ int NUM_OP_TORRES = 2;
 
 // ------------- DEFINIÇÕES DAS FUNÇÕES -------------
 void *rotina_aviao(void *arg);
+void solicitar_pista(int id_aviao);
+void liberar_pista(int id_aviao);
+void solicitar_portao(int id_aviao);
+void liberar_portao(int id_aviao);
+void solicitar_torre(int id_aviao);
+void liberar_torre(int id_aviao);
+void solicitar_pouso(aviao_t *voo);
+void liberar_pouso(aviao_t *voo);
+void solicitar_desembarque(aviao_t *voo);
+void liberar_desembarque(aviao_t *voo);
+void solicitar_decolagem(aviao_t *voo);
+void liberar_decolagem(aviao_t *voo);
 // --------------------------------------------------
 
 // ------------- Variáveis globais -------------
@@ -42,7 +54,9 @@ pthread_t threads[MAX_AVIOES];
 // -----------------------------------
 
 // -------------- SEMÁFOROS --------------
-
+sem_t sem_pistas;
+sem_t sem_portoes;
+sem_t sem_torre_ops;
 // ---------------------------------------
 
 // -------------- STRUCTS --------------
@@ -98,8 +112,11 @@ int main(int argc, char* argv[]) {
     printf("Tempo para falha: %d segundos\n", FALHA);
     printf("---------------------------------------------\n\n");
 
-    pthread_t threads[MAX_AVIOES];
-    int contador_avioes = 0;
+    printf("Inicializando semaforos...\n");
+    sem_init(&sem_pistas, 0, NUM_PISTAS);
+    sem_init(&sem_portoes, 0, NUM_PORTOES);
+    sem_init(&sem_torre_ops, 0, NUM_OP_TORRES);
+    printf("Semaforos inicializados!\n\n");
 
     // Inicializa o gerador de números aleatórios
     srand(time(NULL));
@@ -148,6 +165,10 @@ int main(int argc, char* argv[]) {
 
     printf("\n--- SIMULACAO FINALIZADA! Todos os avioes concluiram suas operacoes. ---\n");
 
+    sem_destroy(&sem_pistas);
+    sem_destroy(&sem_portoes);
+    sem_destroy(&sem_torre_ops);
+
     return 0;
 }
 
@@ -157,73 +178,119 @@ void *rotina_aviao(void *arg) {
     printf("AVIAO [%d] (tipo: %s) criado e se aproximando do aeroporto.\n", 
            aviao->ID, aviao->tipo == INTERNACIONAL ? "Internacional" : "Domestico");
 
-    if (aviao->tipo == INTERNACIONAL) {
-        // --- ROTINA DO VOO INTERNACIONAL ---
-        printf("AVIAO [%d] INTERNACIONAL iniciando procedimentos.\n", aviao->ID);
+    // --- 1. POUSO ---
+    solicitar_pouso(aviao);
+    printf("AVIAO [%d] POUSANDO...\n", aviao->ID);
+    sleep(2);
+    liberar_pouso(aviao);
+    printf("AVIAO [%d] POUSO CONCLUIDO.\n\n", aviao->ID);
 
-        // 1. POUSO (Pista -> Torre)
-        printf("AVIAO [%d] solicitando PISTA para pouso.\n", aviao->ID);
-        // [CÓDIGO PARA ALOCAR PISTA]
-        printf("AVIAO [%d] PISTA alocada. Solicitando TORRE para pouso.\n", aviao->ID);
-        // [CÓDIGO PARA ALOCAR TORRE]
-        printf("AVIAO [%d] POUSO CONCLUIDO. Liberando recursos de pouso.\n", aviao->ID);
-        // [CÓDIGO PARA LIBERAR PISTA E TORRE]
-        sleep(2);
+    // --- 2. DESEMBARQUE ---
+    solicitar_desembarque(aviao);
+    printf("AVIAO [%d] DESEMBARCANDO PASSAGEIROS...\n", aviao->ID);
+    sleep(3);
+    liberar_desembarque(aviao);
+    printf("AVIAO [%d] DESEMBARQUE CONCLUIDO.\n\n", aviao->ID);
 
-        // 2. DESEMBARQUE (Portão -> Torre)
-        printf("AVIAO [%d] solicitando PORTAO para desembarque.\n", aviao->ID);
-        // [CÓDIGO PARA ALOCAR PORTAO]
-        printf("AVIAO [%d] PORTAO alocado. Solicitando TORRE para desembarque.\n", aviao->ID);
-        // [CÓDIGO PARA ALOCAR TORRE]
-        printf("AVIAO [%d] DESEMBARQUE CONCLUIDO. Liberando recursos de desembarque.\n", aviao->ID);
-        // [CÓDIGO PARA LIBERAR PORTAO E TORRE]
-        sleep(3);
+    // --- 3. DECOLAGEM ---
+    solicitar_decolagem(aviao);
+    printf("AVIAO [%d] DECOLANDO...\n", aviao->ID);
+    sleep(2);
+    liberar_decolagem(aviao);
+    printf("AVIAO [%d] DECOLAGEM CONCLUIDA.\n\n", aviao->ID);
 
-        // 3. DECOLAGEM (Portão → Pista → Torre)
-        printf("AVIAO [%d] solicitando PORTAO para decolagem.\n", aviao->ID);
-        // [CÓDIGO PARA ALOCAR TORRE]
-        printf("AVIAO [%d] PORTAO alocado. Solicitando PISTA para decolagem.\n", aviao->ID);
-        // [CÓDIGO PARA ALOCAR PORTAO]
-        printf("AVIAO [%d] PISTA alocada. Solicitando TORRE para decolagem.\n", aviao->ID);
-        // [CÓDIGO PARA ALOCAR PISTA]
-        printf("AVIAO [%d] DECOLAGEM CONCLUIDA. Liberando todos os recursos.\n", aviao->ID);
-        // [CÓDIGO PARA LIBERAR PISTA, PORTAO E TORRE]
-        sleep(2);
-    } else { // Voo Doméstico
-        // --- ROTINA DO VOO DOMÉSTICO ---
-        printf("AVIAO [%d] DOMESTICO iniciando procedimentos.\n", aviao->ID);
 
-        // 1. POUSO (Torre -> Pista)
-        printf("AVIAO [%d] solicitando TORRE para pouso.\n", aviao->ID);
-        // [CÓDIGO PARA ALOCAR TORRE]
-        printf("AVIAO [%d] TORRE alocada. Solicitando PISTA para pouso.\n", aviao->ID);
-        // [CÓDIGO PARA ALOCAR PISTA]
-        printf("AVIAO [%d] POUSO CONCLUIDO. Liberando recursos de pouso.\n", aviao->ID);
-        // [CÓDIGO PARA LIBERAR PISTA E TORRE]
-        sleep(2);
-
-        // 2. DESEMBARQUE (Torre -> Portão)
-        printf("AVIAO [%d] solicitando TORRE para desembarque.\n", aviao->ID);
-        // [CÓDIGO PARA ALOCAR TORRE]
-        printf("AVIAO [%d] TORRE alocada. Solicitando PORTAO para desembarque.\n", aviao->ID);
-        // [CÓDIGO PARA ALOCAR PORTAO]
-        printf("AVIAO [%d] DESEMBARQUE CONCLUIDO. Liberando recursos de desembarque.\n", aviao->ID);
-        // [CÓDIGO PARA LIBERAR PORTAO E TORRE]
-        sleep(3);
-
-        // 3. DECOLAGEM (Torre → Portão → Pista)
-        printf("AVIAO [%d] solicitando TORRE para decolagem.\n", aviao->ID);
-        // [CÓDIGO PARA ALOCAR PORTAO]
-        printf("AVIAO [%d] TORRE alocada. Solicitando PORTAO para decolagem.\n", aviao->ID);
-        // [CÓDIGO PARA ALOCAR PISTA]
-        printf("AVIAO [%d] PORTAO alocado. Solicitando PISTA para decolagem.\n", aviao->ID);
-        // [CÓDIGO PARA ALOCAR TORRE]
-        printf("AVIAO [%d] DECOLAGEM CONCLUIDA. Liberando todos os recursos.\n", aviao->ID);
-        // [CÓDIGO PARA LIBERAR PISTA, PORTAO E TORRE]
-        sleep(2);
-    }
-
-    printf("AVIAO [%d] concluiu todas as operacoes.\n", aviao->ID);
-
+    printf("AVIAO [%d] concluiu todas as operacoes com sucesso.\n", aviao->ID);
+    
     pthread_exit(NULL);
+}
+
+
+// ------------------- GERENCIAMENTO DE RECURSOS -------------------
+
+void solicitar_pista(int id_aviao) {
+    printf("AVIAO [%d] solicitando PISTA...\n", id_aviao);
+    sem_wait(&sem_pistas);
+    printf("AVIAO [%d] PISTA alocada.\n", id_aviao);
+}
+
+void liberar_pista(int id_aviao) {
+    printf("AVIAO [%d] liberando PISTA.\n", id_aviao);
+    sem_post(&sem_pistas);
+}
+
+void solicitar_portao(int id_aviao) {
+    printf("AVIAO [%d] solicitando PORTAO...\n", id_aviao);
+    sem_wait(&sem_portoes);
+    printf("AVIAO [%d] PORTAO alocado.\n", id_aviao);
+}
+
+void liberar_portao(int id_aviao) {
+    printf("AVIAO [%d] liberando PORTAO.\n", id_aviao);
+    sem_post(&sem_portoes);
+}
+
+void solicitar_torre(int id_aviao) {
+    printf("AVIAO [%d] solicitando operacao da TORRE...\n", id_aviao);
+    sem_wait(&sem_torre_ops);
+    printf("AVIAO [%d] operacao da TORRE alocada.\n", id_aviao);
+}
+
+void liberar_torre(int id_aviao) {
+    printf("AVIAO [%d] liberando operacao da TORRE.\n", id_aviao);
+    sem_post(&sem_torre_ops);
+}
+
+// ----------------------------------------------------------------------
+
+// ------------------- POUSO, DESEMBARQUE E DECOLAGEM -------------------
+
+void solicitar_pouso(aviao_t *voo) {
+    if (voo->tipo == INTERNACIONAL) {
+        solicitar_pista(voo->ID);
+        solicitar_torre(voo->ID);
+    } else { // DOMESTICO
+        solicitar_torre(voo->ID);
+        solicitar_pista(voo->ID);
+    }
+}
+
+void liberar_pouso(aviao_t *voo) {
+    liberar_pista(voo->ID);
+    liberar_torre(voo->ID);
+}
+
+void solicitar_desembarque(aviao_t *voo) {
+    if (voo->tipo == INTERNACIONAL) {
+        solicitar_portao(voo->ID);
+        solicitar_torre(voo->ID);
+    } else { // DOMESTICO
+        solicitar_torre(voo->ID);
+        solicitar_portao(voo->ID);
+    }
+}
+
+void liberar_desembarque(aviao_t *voo) {
+    liberar_torre(voo->ID);
+    printf("AVIAO [%d] servicos de solo em andamento no portao.\n", voo->ID);
+    sleep(5);
+    liberar_portao(voo->ID);
+}
+
+void solicitar_decolagem(aviao_t *voo) {
+    if (voo->tipo == INTERNACIONAL) {
+        solicitar_portao(voo->ID);
+        solicitar_pista(voo->ID);
+        solicitar_torre(voo->ID);
+    } else { // DOMESTICO
+        solicitar_torre(voo->ID);
+        solicitar_portao(voo->ID);
+        solicitar_pista(voo->ID);
+    }
+}
+
+void liberar_decolagem(aviao_t *voo) {
+    liberar_torre(voo->ID);
+    liberar_portao(voo->ID);
+    liberar_pista(voo->ID);
 }
