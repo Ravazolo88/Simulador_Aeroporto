@@ -1,0 +1,513 @@
+====================================================
+INFO: Sistema inicializado. Iniciando simulacao...
+====================================================
+INFO: Modulo Aeroporto inicializado.
+INFO: Simulacao rodando por 240 segundos ou ate 50 avioes serem criados.
+INFO: Voo DOM 1 criado e iniciando procedimentos (Prio inicial: 0).
+POUSO: Voo DOM 1 aguardando recursos para pousar.
+POUSO: Voo DOM 1 obteve recursos. Pousando agora...
+INFO: Voo DOM 2 criado e iniciando procedimentos (Prio inicial: 0).
+POUSO: Voo DOM 2 aguardando recursos para pousar.
+POUSO: Voo DOM 2 obteve recursos. Pousando agora...
+POUSO: Voo DOM 1 pousou e liberou a pista/torre.
+DESEMBARQUE: Voo DOM 1 aguardando recursos para desembarcar.
+DESEMBARQUE: Voo DOM 1 atracou no portao. Desembarcando...
+INFO: Voo INTL 3 criado e iniciando procedimentos (Prio inicial: 0).
+POUSO: Voo INTL 3 aguardando recursos para pousar.
+POUSO: Voo INTL 3 obteve recursos. Pousando agora...
+POUSO: Voo DOM 2 pousou e liberou a pista/torre.
+DESEMBARQUE: Voo DOM 2 aguardando recursos para desembarcar.
+DESEMBARQUE: Voo DOM 2 atracou no portao. Desembarcando...
+INFO: Voo INTL 4 criado e iniciando procedimentos (Prio inicial: 0).
+POUSO: Voo INTL 4 aguardando recursos para pousar.
+POUSO: Voo INTL 4 obteve recursos. Pousando agora...
+DESEMBARQUE: Voo DOM 1 finalizou o desembarque e liberou o portao/torre.
+DECOLAGEM: Voo DOM 1 aguardando recursos para decolar.
+DECOLAGEM: Voo DOM 1 obteve recursos. Decolando agora...
+INFO: Voo DOM 5 criado e iniciando procedimentos (Prio inicial: 0).
+POUSO: Voo DOM 5 aguardando recursos para pousar.
+POUSO: Voo DOM 5 obteve recursos. Pousando agora...
+POUSO: Voo INTL 3 pousou e liberou a pista/torre.
+DESEMBARQUE: Voo INTL 3 aguardando recursos para desembarcar.
+DESEMBARQUE: Voo INTL 3 atracou no portao. Desembarcando...
+INFO: Voo DOM 6 criado e iniciando procedimentos (Prio inicial: 0).
+DESEMBARQUE: Voo DOM 2 finalizou o desembarque e liberou o portao/torre.
+DECOLAGEM: Voo DOM 2 aguardando recursos para decolar.
+DECOLAGEM: Voo DOM 2 obteve recursos. Decolando agora...
+POUSO: Voo DOM 6 aguardando recursos para pousar.
+POUSO: Voo DOM 6 obteve recursos. Pousando agora...
+POUSO: Voo INTL 4 pousou e liberou a pista/torre.
+DESEMBARQUE: Voo INTL 4 aguardando recursos para desembarcar.
+DESEMBARQUE: Voo INTL 4 atracou no portao. Desembarcando...
+SUCESSO: Voo DOM 1 decolou com sucesso e finalizou o ciclo completo!
+POUSO: Voo DOM 5 pousou e liberou a pista/torre.
+DESEMBARQUE: Voo DOM 5 aguardando recursos para desembarcar.
+DESEMBARQUE: Voo DOM 5 atracou no portao. Desembarcando...
+INFO: Voo DOM 7 criado e iniciando procedimentos (Prio inicial: 50).
+POUSO: Voo DOM 7 aguardando recursos para pousar.
+POUSO: Voo DOM 7 obteve recursos. Pousando agora...
+DESEMBARQUE: Voo INTL 3 finalizou o desembarque e liberou o portao/torre.
+DECOLAGEM: Voo INTL 3 aguardando recursos para decolar.
+DECOLAGEM: Voo INTL 3 obteve recursos. Decolando agora...
+SUCESSO: Voo DOM 2 decolou com sucesso e finalizou o ciclo completo!
+POUSO: Voo DOM 6 pousou e liberou a pista/torre.
+DESEMBARQUE: Voo DOM 6 aguardando recursos para desembarcar.
+DESEMBARQUE: Voo DOM 6 atracou no portao. Desembarcando...
+INFO: Voo DOM 8 criado e iniciando procedimentos (Prio inicial: 50).
+POUSO: Voo DOM 8 aguardando recursos para pousar.
+POUSO: Voo DOM 8 obteve recursos. Pousando agora...
+DESEMBARQUE: Voo INTL 4 finalizou o desembarque e liberou o portao/torre.
+DECOLAGEM: Voo INTL 4 aguardando recursos para decolar.
+DECOLAGEM: Voo INTL 4 obteve recursos. Decolando agora...
+POUSO: Voo DOM 7 pousou e liberou a pista/torre.
+DESEMBARQUE: Voo DOM 7 aguardando recursos para desembarcar.
+DESEMBARQUE: Voo DOM 7 atracou no portao. Desembarcando...
+DESEMBARQUE: Voo DOM 5 finalizou o desembarque e liberou o portao/torre.
+DECOLAGEM: Voo DOM 5 aguardando recursos para decolar.
+DECOLAGEM: Voo DOM 5 obteve recursos. Decolando agora...
+SUCESSO: Voo INTL 3 decolou com sucesso e finalizou o ciclo completo!
+POUSO: Voo DOM 8 pousou e liberou a pista/torre.
+DESEMBARQUE: Voo DOM 8 aguardando recursos para desembarcar.
+DESEMBARQUE: Voo DOM 8 atracou no portao. Desembarcando...
+SUCESSO: Voo INTL 4 decolou com sucesso e finalizou o ciclo completo!
+DESEMBARQUE: Voo DOM 6 finalizou o desembarque e liberou o portao/torre.
+DECOLAGEM: Voo DOM 6 aguardando recursos para decolar.
+DECOLAGEM: Voo DOM 6 obteve recursos. Decolando agora...
+INFO: Voo INTL 9 criado e iniciando procedimentos (Prio inicial: 100).
+POUSO: Voo INTL 9 aguardando recursos para pousar.
+POUSO: Voo INTL 9 obteve recursos. Pousando agora...
+SUCESSO: Voo DOM 5 decolou com sucesso e finalizou o ciclo completo!
+INFO: Voo DOM 10 criado e iniciando procedimentos (Prio inicial: 100).
+POUSO: Voo DOM 10 aguardando recursos para pousar.
+POUSO: Voo DOM 10 obteve recursos. Pousando agora...
+DESEMBARQUE: Voo DOM 7 finalizou o desembarque e liberou o portao/torre.
+DECOLAGEM: Voo DOM 7 aguardando recursos para decolar.
+DECOLAGEM: Voo DOM 7 obteve recursos. Decolando agora...
+SUCESSO: Voo DOM 6 decolou com sucesso e finalizou o ciclo completo!
+INFO: Voo INTL 11 criado e iniciando procedimentos (Prio inicial: 50).
+POUSO: Voo INTL 11 aguardando recursos para pousar.
+POUSO: Voo INTL 11 obteve recursos. Pousando agora...
+POUSO: Voo INTL 9 pousou e liberou a pista/torre.
+DESEMBARQUE: Voo INTL 9 aguardando recursos para desembarcar.
+DESEMBARQUE: Voo INTL 9 atracou no portao. Desembarcando...
+DESEMBARQUE: Voo DOM 8 finalizou o desembarque e liberou o portao/torre.
+DECOLAGEM: Voo DOM 8 aguardando recursos para decolar.
+DECOLAGEM: Voo DOM 8 obteve recursos. Decolando agora...
+INFO: Voo INTL 12 criado e iniciando procedimentos (Prio inicial: 50).
+POUSO: Voo INTL 12 aguardando recursos para pousar.
+POUSO: Voo INTL 12 obteve recursos. Pousando agora...
+POUSO: Voo DOM 10 pousou e liberou a pista/torre.
+DESEMBARQUE: Voo DOM 10 aguardando recursos para desembarcar.
+DESEMBARQUE: Voo DOM 10 atracou no portao. Desembarcando...
+SUCESSO: Voo DOM 7 decolou com sucesso e finalizou o ciclo completo!
+INFO: Voo INTL 13 criado e iniciando procedimentos (Prio inicial: 50).
+POUSO: Voo INTL 13 aguardando recursos para pousar.
+POUSO: Voo INTL 13 obteve recursos. Pousando agora...
+POUSO: Voo INTL 11 pousou e liberou a pista/torre.
+DESEMBARQUE: Voo INTL 11 aguardando recursos para desembarcar.
+DESEMBARQUE: Voo INTL 11 atracou no portao. Desembarcando...
+SUCESSO: Voo DOM 8 decolou com sucesso e finalizou o ciclo completo!
+INFO: Voo DOM 14 criado e iniciando procedimentos (Prio inicial: 50).
+POUSO: Voo DOM 14 aguardando recursos para pousar.
+POUSO: Voo DOM 14 obteve recursos. Pousando agora...
+POUSO: Voo INTL 12 pousou e liberou a pista/torre.
+DESEMBARQUE: Voo INTL 12 aguardando recursos para desembarcar.
+DESEMBARQUE: Voo INTL 12 atracou no portao. Desembarcando...
+DESEMBARQUE: Voo INTL 9 finalizou o desembarque e liberou o portao/torre.
+DECOLAGEM: Voo INTL 9 aguardando recursos para decolar.
+DECOLAGEM: Voo INTL 9 obteve recursos. Decolando agora...
+POUSO: Voo INTL 13 pousou e liberou a pista/torre.
+DESEMBARQUE: Voo INTL 13 aguardando recursos para desembarcar.
+DESEMBARQUE: Voo INTL 13 atracou no portao. Desembarcando...
+INFO: Voo INTL 15 criado e iniciando procedimentos (Prio inicial: 0).
+POUSO: Voo INTL 15 aguardando recursos para pousar.
+DESEMBARQUE: Voo DOM 10 finalizou o desembarque e liberou o portao/torre.
+DECOLAGEM: Voo DOM 10 aguardando recursos para decolar.
+DECOLAGEM: Voo DOM 10 obteve recursos. Decolando agora...
+POUSO: Voo INTL 15 obteve recursos. Pousando agora...
+DESEMBARQUE: Voo INTL 11 finalizou o desembarque e liberou o portao/torre.
+DECOLAGEM: Voo INTL 11 aguardando recursos para decolar.
+DECOLAGEM: Voo INTL 11 obteve recursos. Decolando agora...
+POUSO: Voo DOM 14 pousou e liberou a pista/torre.
+DESEMBARQUE: Voo DOM 14 aguardando recursos para desembarcar.
+DESEMBARQUE: Voo DOM 14 atracou no portao. Desembarcando...
+SUCESSO: Voo INTL 9 decolou com sucesso e finalizou o ciclo completo!
+DESEMBARQUE: Voo INTL 12 finalizou o desembarque e liberou o portao/torre.
+DECOLAGEM: Voo INTL 12 aguardando recursos para decolar.
+DECOLAGEM: Voo INTL 12 obteve recursos. Decolando agora...
+INFO: Voo DOM 16 criado e iniciando procedimentos (Prio inicial: 100).
+POUSO: Voo DOM 16 aguardando recursos para pousar.
+POUSO: Voo DOM 16 obteve recursos. Pousando agora...
+SUCESSO: Voo DOM 10 decolou com sucesso e finalizou o ciclo completo!
+POUSO: Voo INTL 15 pousou e liberou a pista/torre.
+DESEMBARQUE: Voo INTL 15 aguardando recursos para desembarcar.
+DESEMBARQUE: Voo INTL 15 atracou no portao. Desembarcando...
+DESEMBARQUE: Voo INTL 13 finalizou o desembarque e liberou o portao/torre.
+DECOLAGEM: Voo INTL 13 aguardando recursos para decolar.
+DECOLAGEM: Voo INTL 13 obteve recursos. Decolando agora...
+INFO: Voo INTL 17 criado e iniciando procedimentos (Prio inicial: 50).
+POUSO: Voo INTL 17 aguardando recursos para pousar.
+POUSO: Voo INTL 17 obteve recursos. Pousando agora...
+SUCESSO: Voo INTL 11 decolou com sucesso e finalizou o ciclo completo!
+SUCESSO: Voo INTL 12 decolou com sucesso e finalizou o ciclo completo!
+INFO: Voo DOM 18 criado e iniciando procedimentos (Prio inicial: 100).
+POUSO: Voo DOM 18 aguardando recursos para pousar.
+POUSO: Voo DOM 18 obteve recursos. Pousando agora...
+POUSO: Voo DOM 16 pousou e liberou a pista/torre.
+DESEMBARQUE: Voo DOM 16 aguardando recursos para desembarcar.
+DESEMBARQUE: Voo DOM 16 atracou no portao. Desembarcando...
+DESEMBARQUE: Voo DOM 14 finalizou o desembarque e liberou o portao/torre.
+DECOLAGEM: Voo DOM 14 aguardando recursos para decolar.
+DECOLAGEM: Voo DOM 14 obteve recursos. Decolando agora...
+SUCESSO: Voo INTL 13 decolou com sucesso e finalizou o ciclo completo!
+DESEMBARQUE: Voo INTL 15 finalizou o desembarque e liberou o portao/torre.
+DECOLAGEM: Voo INTL 15 aguardando recursos para decolar.
+DECOLAGEM: Voo INTL 15 obteve recursos. Decolando agora...
+POUSO: Voo INTL 17 pousou e liberou a pista/torre.
+DESEMBARQUE: Voo INTL 17 aguardando recursos para desembarcar.
+DESEMBARQUE: Voo INTL 17 atracou no portao. Desembarcando...
+POUSO: Voo DOM 18 pousou e liberou a pista/torre.
+DESEMBARQUE: Voo DOM 18 aguardando recursos para desembarcar.
+DESEMBARQUE: Voo DOM 18 atracou no portao. Desembarcando...
+SUCESSO: Voo DOM 14 decolou com sucesso e finalizou o ciclo completo!
+INFO: Voo INTL 19 criado e iniciando procedimentos (Prio inicial: 50).
+POUSO: Voo INTL 19 aguardando recursos para pousar.
+POUSO: Voo INTL 19 obteve recursos. Pousando agora...
+DESEMBARQUE: Voo DOM 16 finalizou o desembarque e liberou o portao/torre.
+DECOLAGEM: Voo DOM 16 aguardando recursos para decolar.
+DECOLAGEM: Voo DOM 16 obteve recursos. Decolando agora...
+SUCESSO: Voo INTL 15 decolou com sucesso e finalizou o ciclo completo!
+DESEMBARQUE: Voo INTL 17 finalizou o desembarque e liberou o portao/torre.
+DECOLAGEM: Voo INTL 17 aguardando recursos para decolar.
+DECOLAGEM: Voo INTL 17 obteve recursos. Decolando agora...
+INFO: Voo INTL 20 criado e iniciando procedimentos (Prio inicial: 100).
+POUSO: Voo INTL 20 aguardando recursos para pousar.
+POUSO: Voo INTL 20 obteve recursos. Pousando agora...
+POUSO: Voo INTL 19 pousou e liberou a pista/torre.
+DESEMBARQUE: Voo INTL 19 aguardando recursos para desembarcar.
+DESEMBARQUE: Voo INTL 19 atracou no portao. Desembarcando...
+DESEMBARQUE: Voo DOM 18 finalizou o desembarque e liberou o portao/torre.
+DECOLAGEM: Voo DOM 18 aguardando recursos para decolar.
+DECOLAGEM: Voo DOM 18 obteve recursos. Decolando agora...
+SUCESSO: Voo DOM 16 decolou com sucesso e finalizou o ciclo completo!
+SUCESSO: Voo INTL 17 decolou com sucesso e finalizou o ciclo completo!
+INFO: Voo DOM 21 criado e iniciando procedimentos (Prio inicial: 100).
+POUSO: Voo DOM 21 aguardando recursos para pousar.
+POUSO: Voo DOM 21 obteve recursos. Pousando agora...
+POUSO: Voo INTL 20 pousou e liberou a pista/torre.
+DESEMBARQUE: Voo INTL 20 aguardando recursos para desembarcar.
+DESEMBARQUE: Voo INTL 20 atracou no portao. Desembarcando...
+SUCESSO: Voo DOM 18 decolou com sucesso e finalizou o ciclo completo!
+INFO: Voo DOM 22 criado e iniciando procedimentos (Prio inicial: 50).
+POUSO: Voo DOM 22 aguardando recursos para pousar.
+POUSO: Voo DOM 22 obteve recursos. Pousando agora...
+DESEMBARQUE: Voo INTL 19 finalizou o desembarque e liberou o portao/torre.
+DECOLAGEM: Voo INTL 19 aguardando recursos para decolar.
+DECOLAGEM: Voo INTL 19 obteve recursos. Decolando agora...
+INFO: Voo INTL 23 criado e iniciando procedimentos (Prio inicial: 100).
+POUSO: Voo INTL 23 aguardando recursos para pousar.
+POUSO: Voo INTL 23 obteve recursos. Pousando agora...
+POUSO: Voo DOM 21 pousou e liberou a pista/torre.
+DESEMBARQUE: Voo DOM 21 aguardando recursos para desembarcar.
+DESEMBARQUE: Voo DOM 21 atracou no portao. Desembarcando...
+DESEMBARQUE: Voo INTL 20 finalizou o desembarque e liberou o portao/torre.
+DECOLAGEM: Voo INTL 20 aguardando recursos para decolar.
+DECOLAGEM: Voo INTL 20 obteve recursos. Decolando agora...
+POUSO: Voo DOM 22 pousou e liberou a pista/torre.
+DESEMBARQUE: Voo DOM 22 aguardando recursos para desembarcar.
+DESEMBARQUE: Voo DOM 22 atracou no portao. Desembarcando...
+SUCESSO: Voo INTL 19 decolou com sucesso e finalizou o ciclo completo!
+POUSO: Voo INTL 23 pousou e liberou a pista/torre.
+DESEMBARQUE: Voo INTL 23 aguardando recursos para desembarcar.
+DESEMBARQUE: Voo INTL 23 atracou no portao. Desembarcando...
+INFO: Voo INTL 24 criado e iniciando procedimentos (Prio inicial: 50).
+POUSO: Voo INTL 24 aguardando recursos para pousar.
+POUSO: Voo INTL 24 obteve recursos. Pousando agora...
+SUCESSO: Voo INTL 20 decolou com sucesso e finalizou o ciclo completo!
+DESEMBARQUE: Voo DOM 21 finalizou o desembarque e liberou o portao/torre.
+DECOLAGEM: Voo DOM 21 aguardando recursos para decolar.
+DECOLAGEM: Voo DOM 21 obteve recursos. Decolando agora...
+INFO: Voo DOM 25 criado e iniciando procedimentos (Prio inicial: 100).
+POUSO: Voo DOM 25 aguardando recursos para pousar.
+POUSO: Voo DOM 25 obteve recursos. Pousando agora...
+DESEMBARQUE: Voo DOM 22 finalizou o desembarque e liberou o portao/torre.
+DECOLAGEM: Voo DOM 22 aguardando recursos para decolar.
+DECOLAGEM: Voo DOM 22 obteve recursos. Decolando agora...
+POUSO: Voo INTL 24 pousou e liberou a pista/torre.
+DESEMBARQUE: Voo INTL 24 aguardando recursos para desembarcar.
+DESEMBARQUE: Voo INTL 24 atracou no portao. Desembarcando...
+DESEMBARQUE: Voo INTL 23 finalizou o desembarque e liberou o portao/torre.
+DECOLAGEM: Voo INTL 23 aguardando recursos para decolar.
+DECOLAGEM: Voo INTL 23 obteve recursos. Decolando agora...
+SUCESSO: Voo DOM 21 decolou com sucesso e finalizou o ciclo completo!
+POUSO: Voo DOM 25 pousou e liberou a pista/torre.
+DESEMBARQUE: Voo DOM 25 aguardando recursos para desembarcar.
+DESEMBARQUE: Voo DOM 25 atracou no portao. Desembarcando...
+SUCESSO: Voo DOM 22 decolou com sucesso e finalizou o ciclo completo!
+SUCESSO: Voo INTL 23 decolou com sucesso e finalizou o ciclo completo!
+INFO: Voo INTL 26 criado e iniciando procedimentos (Prio inicial: 50).
+POUSO: Voo INTL 26 aguardando recursos para pousar.
+POUSO: Voo INTL 26 obteve recursos. Pousando agora...
+DESEMBARQUE: Voo INTL 24 finalizou o desembarque e liberou o portao/torre.
+DECOLAGEM: Voo INTL 24 aguardando recursos para decolar.
+DECOLAGEM: Voo INTL 24 obteve recursos. Decolando agora...
+DESEMBARQUE: Voo DOM 25 finalizou o desembarque e liberou o portao/torre.
+DECOLAGEM: Voo DOM 25 aguardando recursos para decolar.
+DECOLAGEM: Voo DOM 25 obteve recursos. Decolando agora...
+POUSO: Voo INTL 26 pousou e liberou a pista/torre.
+DESEMBARQUE: Voo INTL 26 aguardando recursos para desembarcar.
+DESEMBARQUE: Voo INTL 26 atracou no portao. Desembarcando...
+SUCESSO: Voo INTL 24 decolou com sucesso e finalizou o ciclo completo!
+INFO: Voo INTL 27 criado e iniciando procedimentos (Prio inicial: 100).
+POUSO: Voo INTL 27 aguardando recursos para pousar.
+POUSO: Voo INTL 27 obteve recursos. Pousando agora...
+SUCESSO: Voo DOM 25 decolou com sucesso e finalizou o ciclo completo!
+POUSO: Voo INTL 27 pousou e liberou a pista/torre.
+DESEMBARQUE: Voo INTL 27 aguardando recursos para desembarcar.
+DESEMBARQUE: Voo INTL 27 atracou no portao. Desembarcando...
+DESEMBARQUE: Voo INTL 26 finalizou o desembarque e liberou o portao/torre.
+DECOLAGEM: Voo INTL 26 aguardando recursos para decolar.
+DECOLAGEM: Voo INTL 26 obteve recursos. Decolando agora...
+INFO: Voo INTL 28 criado e iniciando procedimentos (Prio inicial: 100).
+POUSO: Voo INTL 28 aguardando recursos para pousar.
+POUSO: Voo INTL 28 obteve recursos. Pousando agora...
+SUCESSO: Voo INTL 26 decolou com sucesso e finalizou o ciclo completo!
+POUSO: Voo INTL 28 pousou e liberou a pista/torre.
+DESEMBARQUE: Voo INTL 28 aguardando recursos para desembarcar.
+DESEMBARQUE: Voo INTL 28 atracou no portao. Desembarcando...
+DESEMBARQUE: Voo INTL 27 finalizou o desembarque e liberou o portao/torre.
+DECOLAGEM: Voo INTL 27 aguardando recursos para decolar.
+DECOLAGEM: Voo INTL 27 obteve recursos. Decolando agora...
+INFO: Voo DOM 29 criado e iniciando procedimentos (Prio inicial: 50).
+POUSO: Voo DOM 29 aguardando recursos para pousar.
+POUSO: Voo DOM 29 obteve recursos. Pousando agora...
+SUCESSO: Voo INTL 27 decolou com sucesso e finalizou o ciclo completo!
+POUSO: Voo DOM 29 pousou e liberou a pista/torre.
+DESEMBARQUE: Voo DOM 29 aguardando recursos para desembarcar.
+DESEMBARQUE: Voo DOM 29 atracou no portao. Desembarcando...
+INFO: Voo DOM 30 criado e iniciando procedimentos (Prio inicial: 100).
+POUSO: Voo DOM 30 aguardando recursos para pousar.
+POUSO: Voo DOM 30 obteve recursos. Pousando agora...
+DESEMBARQUE: Voo INTL 28 finalizou o desembarque e liberou o portao/torre.
+DECOLAGEM: Voo INTL 28 aguardando recursos para decolar.
+DECOLAGEM: Voo INTL 28 obteve recursos. Decolando agora...
+POUSO: Voo DOM 30 pousou e liberou a pista/torre.
+DESEMBARQUE: Voo DOM 30 aguardando recursos para desembarcar.
+DESEMBARQUE: Voo DOM 30 atracou no portao. Desembarcando...
+SUCESSO: Voo INTL 28 decolou com sucesso e finalizou o ciclo completo!
+INFO: Voo DOM 31 criado e iniciando procedimentos (Prio inicial: 100).
+POUSO: Voo DOM 31 aguardando recursos para pousar.
+POUSO: Voo DOM 31 obteve recursos. Pousando agora...
+DESEMBARQUE: Voo DOM 29 finalizou o desembarque e liberou o portao/torre.
+DECOLAGEM: Voo DOM 29 aguardando recursos para decolar.
+DECOLAGEM: Voo DOM 29 obteve recursos. Decolando agora...
+SUCESSO: Voo DOM 29 decolou com sucesso e finalizou o ciclo completo!
+POUSO: Voo DOM 31 pousou e liberou a pista/torre.
+DESEMBARQUE: Voo DOM 31 aguardando recursos para desembarcar.
+DESEMBARQUE: Voo DOM 31 atracou no portao. Desembarcando...
+DESEMBARQUE: Voo DOM 30 finalizou o desembarque e liberou o portao/torre.
+DECOLAGEM: Voo DOM 30 aguardando recursos para decolar.
+DECOLAGEM: Voo DOM 30 obteve recursos. Decolando agora...
+INFO: Voo INTL 32 criado e iniciando procedimentos (Prio inicial: 100).
+POUSO: Voo INTL 32 aguardando recursos para pousar.
+POUSO: Voo INTL 32 obteve recursos. Pousando agora...
+INFO: Voo DOM 33 criado e iniciando procedimentos (Prio inicial: 50).
+POUSO: Voo DOM 33 aguardando recursos para pousar.
+POUSO: Voo DOM 33 obteve recursos. Pousando agora...
+SUCESSO: Voo DOM 30 decolou com sucesso e finalizou o ciclo completo!
+POUSO: Voo INTL 32 pousou e liberou a pista/torre.
+DESEMBARQUE: Voo INTL 32 aguardando recursos para desembarcar.
+DESEMBARQUE: Voo INTL 32 atracou no portao. Desembarcando...
+DESEMBARQUE: Voo DOM 31 finalizou o desembarque e liberou o portao/torre.
+DECOLAGEM: Voo DOM 31 aguardando recursos para decolar.
+DECOLAGEM: Voo DOM 31 obteve recursos. Decolando agora...
+INFO: Voo DOM 34 criado e iniciando procedimentos (Prio inicial: 100).
+POUSO: Voo DOM 34 aguardando recursos para pousar.
+POUSO: Voo DOM 34 obteve recursos. Pousando agora...
+POUSO: Voo DOM 33 pousou e liberou a pista/torre.
+DESEMBARQUE: Voo DOM 33 aguardando recursos para desembarcar.
+DESEMBARQUE: Voo DOM 33 atracou no portao. Desembarcando...
+INFO: Voo DOM 35 criado e iniciando procedimentos (Prio inicial: 50).
+POUSO: Voo DOM 35 aguardando recursos para pousar.
+POUSO: Voo DOM 35 obteve recursos. Pousando agora...
+SUCESSO: Voo DOM 31 decolou com sucesso e finalizou o ciclo completo!
+DESEMBARQUE: Voo INTL 32 finalizou o desembarque e liberou o portao/torre.
+DECOLAGEM: Voo INTL 32 aguardando recursos para decolar.
+DECOLAGEM: Voo INTL 32 obteve recursos. Decolando agora...
+POUSO: Voo DOM 34 pousou e liberou a pista/torre.
+DESEMBARQUE: Voo DOM 34 aguardando recursos para desembarcar.
+DESEMBARQUE: Voo DOM 34 atracou no portao. Desembarcando...
+INFO: Voo INTL 36 criado e iniciando procedimentos (Prio inicial: 100).
+POUSO: Voo INTL 36 aguardando recursos para pousar.
+POUSO: Voo INTL 36 obteve recursos. Pousando agora...
+DESEMBARQUE: Voo DOM 33 finalizou o desembarque e liberou o portao/torre.
+DECOLAGEM: Voo DOM 33 aguardando recursos para decolar.
+DECOLAGEM: Voo DOM 33 obteve recursos. Decolando agora...
+POUSO: Voo DOM 35 pousou e liberou a pista/torre.
+DESEMBARQUE: Voo DOM 35 aguardando recursos para desembarcar.
+DESEMBARQUE: Voo DOM 35 atracou no portao. Desembarcando...
+INFO: Voo DOM 37 criado e iniciando procedimentos (Prio inicial: 50).
+POUSO: Voo DOM 37 aguardando recursos para pousar.
+POUSO: Voo DOM 37 obteve recursos. Pousando agora...
+SUCESSO: Voo INTL 32 decolou com sucesso e finalizou o ciclo completo!
+POUSO: Voo INTL 36 pousou e liberou a pista/torre.
+DESEMBARQUE: Voo INTL 36 aguardando recursos para desembarcar.
+DESEMBARQUE: Voo INTL 36 atracou no portao. Desembarcando...
+INFO: Voo DOM 38 criado e iniciando procedimentos (Prio inicial: 100).
+POUSO: Voo DOM 38 aguardando recursos para pousar.
+POUSO: Voo DOM 38 obteve recursos. Pousando agora...
+SUCESSO: Voo DOM 33 decolou com sucesso e finalizou o ciclo completo!
+DESEMBARQUE: Voo DOM 34 finalizou o desembarque e liberou o portao/torre.
+DECOLAGEM: Voo DOM 34 aguardando recursos para decolar.
+DECOLAGEM: Voo DOM 34 obteve recursos. Decolando agora...
+POUSO: Voo DOM 37 pousou e liberou a pista/torre.
+DESEMBARQUE: Voo DOM 37 aguardando recursos para desembarcar.
+DESEMBARQUE: Voo DOM 37 atracou no portao. Desembarcando...
+DESEMBARQUE: Voo DOM 35 finalizou o desembarque e liberou o portao/torre.
+DECOLAGEM: Voo DOM 35 aguardando recursos para decolar.
+DECOLAGEM: Voo DOM 35 obteve recursos. Decolando agora...
+DESEMBARQUE: Voo INTL 36 finalizou o desembarque e liberou o portao/torre.
+DECOLAGEM: Voo INTL 36 aguardando recursos para decolar.
+DECOLAGEM: Voo INTL 36 obteve recursos. Decolando agora...
+POUSO: Voo DOM 38 pousou e liberou a pista/torre.
+DESEMBARQUE: Voo DOM 38 aguardando recursos para desembarcar.
+DESEMBARQUE: Voo DOM 38 atracou no portao. Desembarcando...
+SUCESSO: Voo DOM 34 decolou com sucesso e finalizou o ciclo completo!
+INFO: Voo INTL 39 criado e iniciando procedimentos (Prio inicial: 50).
+POUSO: Voo INTL 39 aguardando recursos para pousar.
+POUSO: Voo INTL 39 obteve recursos. Pousando agora...
+SUCESSO: Voo DOM 35 decolou com sucesso e finalizou o ciclo completo!
+DESEMBARQUE: Voo DOM 37 finalizou o desembarque e liberou o portao/torre.
+DECOLAGEM: Voo DOM 37 aguardando recursos para decolar.
+DECOLAGEM: Voo DOM 37 obteve recursos. Decolando agora...
+SUCESSO: Voo INTL 36 decolou com sucesso e finalizou o ciclo completo!
+POUSO: Voo INTL 39 pousou e liberou a pista/torre.
+DESEMBARQUE: Voo INTL 39 aguardando recursos para desembarcar.
+DESEMBARQUE: Voo INTL 39 atracou no portao. Desembarcando...
+INFO: Voo INTL 40 criado e iniciando procedimentos (Prio inicial: 100).
+POUSO: Voo INTL 40 aguardando recursos para pousar.
+POUSO: Voo INTL 40 obteve recursos. Pousando agora...
+DESEMBARQUE: Voo DOM 38 finalizou o desembarque e liberou o portao/torre.
+DECOLAGEM: Voo DOM 38 aguardando recursos para decolar.
+DECOLAGEM: Voo DOM 38 obteve recursos. Decolando agora...
+INFO: Voo DOM 41 criado e iniciando procedimentos (Prio inicial: 50).
+POUSO: Voo DOM 41 aguardando recursos para pousar.
+POUSO: Voo DOM 41 obteve recursos. Pousando agora...
+SUCESSO: Voo DOM 37 decolou com sucesso e finalizou o ciclo completo!
+POUSO: Voo INTL 40 pousou e liberou a pista/torre.
+DESEMBARQUE: Voo INTL 40 aguardando recursos para desembarcar.
+DESEMBARQUE: Voo INTL 40 atracou no portao. Desembarcando...
+SUCESSO: Voo DOM 38 decolou com sucesso e finalizou o ciclo completo!
+DESEMBARQUE: Voo INTL 39 finalizou o desembarque e liberou o portao/torre.
+DECOLAGEM: Voo INTL 39 aguardando recursos para decolar.
+DECOLAGEM: Voo INTL 39 obteve recursos. Decolando agora...
+POUSO: Voo DOM 41 pousou e liberou a pista/torre.
+DESEMBARQUE: Voo DOM 41 aguardando recursos para desembarcar.
+DESEMBARQUE: Voo DOM 41 atracou no portao. Desembarcando...
+INFO: Voo DOM 42 criado e iniciando procedimentos (Prio inicial: 50).
+POUSO: Voo DOM 42 aguardando recursos para pousar.
+POUSO: Voo DOM 42 obteve recursos. Pousando agora...
+DESEMBARQUE: Voo INTL 40 finalizou o desembarque e liberou o portao/torre.
+DECOLAGEM: Voo INTL 40 aguardando recursos para decolar.
+DECOLAGEM: Voo INTL 40 obteve recursos. Decolando agora...
+SUCESSO: Voo INTL 39 decolou com sucesso e finalizou o ciclo completo!
+POUSO: Voo DOM 42 pousou e liberou a pista/torre.
+DESEMBARQUE: Voo DOM 42 aguardando recursos para desembarcar.
+DESEMBARQUE: Voo DOM 42 atracou no portao. Desembarcando...
+DESEMBARQUE: Voo DOM 41 finalizou o desembarque e liberou o portao/torre.
+DECOLAGEM: Voo DOM 41 aguardando recursos para decolar.
+DECOLAGEM: Voo DOM 41 obteve recursos. Decolando agora...
+INFO: Voo DOM 43 criado e iniciando procedimentos (Prio inicial: 50).
+POUSO: Voo DOM 43 aguardando recursos para pousar.
+POUSO: Voo DOM 43 obteve recursos. Pousando agora...
+INFO: Voo INTL 44 criado e iniciando procedimentos (Prio inicial: 100).
+POUSO: Voo INTL 44 aguardando recursos para pousar.
+POUSO: Voo INTL 44 obteve recursos. Pousando agora...
+SUCESSO: Voo INTL 40 decolou com sucesso e finalizou o ciclo completo!
+POUSO: Voo DOM 43 pousou e liberou a pista/torre.
+DESEMBARQUE: Voo DOM 43 aguardando recursos para desembarcar.
+DESEMBARQUE: Voo DOM 43 atracou no portao. Desembarcando...
+INFO: Voo DOM 45 criado e iniciando procedimentos (Prio inicial: 50).
+POUSO: Voo DOM 45 aguardando recursos para pousar.
+POUSO: Voo DOM 45 obteve recursos. Pousando agora...
+SUCESSO: Voo DOM 41 decolou com sucesso e finalizou o ciclo completo!
+DESEMBARQUE: Voo DOM 42 finalizou o desembarque e liberou o portao/torre.
+DECOLAGEM: Voo DOM 42 aguardando recursos para decolar.
+DECOLAGEM: Voo DOM 42 obteve recursos. Decolando agora...
+POUSO: Voo INTL 44 pousou e liberou a pista/torre.
+DESEMBARQUE: Voo INTL 44 aguardando recursos para desembarcar.
+DESEMBARQUE: Voo INTL 44 atracou no portao. Desembarcando...
+INFO: Voo INTL 46 criado e iniciando procedimentos (Prio inicial: 50).
+POUSO: Voo INTL 46 aguardando recursos para pousar.
+POUSO: Voo INTL 46 obteve recursos. Pousando agora...
+POUSO: Voo DOM 45 pousou e liberou a pista/torre.
+DESEMBARQUE: Voo DOM 45 aguardando recursos para desembarcar.
+DESEMBARQUE: Voo DOM 45 atracou no portao. Desembarcando...
+SUCESSO: Voo DOM 42 decolou com sucesso e finalizou o ciclo completo!
+DESEMBARQUE: Voo DOM 43 finalizou o desembarque e liberou o portao/torre.
+DECOLAGEM: Voo DOM 43 aguardando recursos para decolar.
+DECOLAGEM: Voo DOM 43 obteve recursos. Decolando agora...
+POUSO: Voo INTL 46 pousou e liberou a pista/torre.
+DESEMBARQUE: Voo INTL 46 aguardando recursos para desembarcar.
+DESEMBARQUE: Voo INTL 46 atracou no portao. Desembarcando...
+INFO: Voo INTL 47 criado e iniciando procedimentos (Prio inicial: 50).
+POUSO: Voo INTL 47 aguardando recursos para pousar.
+POUSO: Voo INTL 47 obteve recursos. Pousando agora...
+DESEMBARQUE: Voo INTL 44 finalizou o desembarque e liberou o portao/torre.
+DECOLAGEM: Voo INTL 44 aguardando recursos para decolar.
+DECOLAGEM: Voo INTL 44 obteve recursos. Decolando agora...
+SUCESSO: Voo DOM 43 decolou com sucesso e finalizou o ciclo completo!
+DESEMBARQUE: Voo DOM 45 finalizou o desembarque e liberou o portao/torre.
+DECOLAGEM: Voo DOM 45 aguardando recursos para decolar.
+DECOLAGEM: Voo DOM 45 obteve recursos. Decolando agora...
+INFO: Voo DOM 48 criado e iniciando procedimentos (Prio inicial: 100).
+POUSO: Voo DOM 48 aguardando recursos para pousar.
+POUSO: Voo DOM 48 obteve recursos. Pousando agora...
+POUSO: Voo INTL 47 pousou e liberou a pista/torre.
+DESEMBARQUE: Voo INTL 47 aguardando recursos para desembarcar.
+DESEMBARQUE: Voo INTL 47 atracou no portao. Desembarcando...
+SUCESSO: Voo INTL 44 decolou com sucesso e finalizou o ciclo completo!
+DESEMBARQUE: Voo INTL 46 finalizou o desembarque e liberou o portao/torre.
+DECOLAGEM: Voo INTL 46 aguardando recursos para decolar.
+DECOLAGEM: Voo INTL 46 obteve recursos. Decolando agora...
+SUCESSO: Voo DOM 45 decolou com sucesso e finalizou o ciclo completo!
+POUSO: Voo DOM 48 pousou e liberou a pista/torre.
+DESEMBARQUE: Voo DOM 48 aguardando recursos para desembarcar.
+DESEMBARQUE: Voo DOM 48 atracou no portao. Desembarcando...
+INFO: Voo DOM 49 criado e iniciando procedimentos (Prio inicial: 50).
+POUSO: Voo DOM 49 aguardando recursos para pousar.
+POUSO: Voo DOM 49 obteve recursos. Pousando agora...
+SUCESSO: Voo INTL 46 decolou com sucesso e finalizou o ciclo completo!
+DESEMBARQUE: Voo INTL 47 finalizou o desembarque e liberou o portao/torre.
+DECOLAGEM: Voo INTL 47 aguardando recursos para decolar.
+DECOLAGEM: Voo INTL 47 obteve recursos. Decolando agora...
+INFO: Voo INTL 50 criado e iniciando procedimentos (Prio inicial: 100).
+POUSO: Voo INTL 50 aguardando recursos para pousar.
+POUSO: Voo INTL 50 obteve recursos. Pousando agora...
+POUSO: Voo DOM 49 pousou e liberou a pista/torre.
+DESEMBARQUE: Voo DOM 49 aguardando recursos para desembarcar.
+DESEMBARQUE: Voo DOM 49 atracou no portao. Desembarcando...
+DESEMBARQUE: Voo DOM 48 finalizou o desembarque e liberou o portao/torre.
+DECOLAGEM: Voo DOM 48 aguardando recursos para decolar.
+DECOLAGEM: Voo DOM 48 obteve recursos. Decolando agora...
+CONTROLE: Limite máximo de aviões (MAX_PLANES) atingido. Nenhuma nova thread será criada.
+CONTROLE: Loop de criacao de avioes finalizado.
+SUCESSO: Voo INTL 47 decolou com sucesso e finalizou o ciclo completo!
+POUSO: Voo INTL 50 pousou e liberou a pista/torre.
+DESEMBARQUE: Voo INTL 50 aguardando recursos para desembarcar.
+DESEMBARQUE: Voo INTL 50 atracou no portao. Desembarcando...
+SUCESSO: Voo DOM 48 decolou com sucesso e finalizou o ciclo completo!
+DESEMBARQUE: Voo DOM 49 finalizou o desembarque e liberou o portao/torre.
+DECOLAGEM: Voo DOM 49 aguardando recursos para decolar.
+DECOLAGEM: Voo DOM 49 obteve recursos. Decolando agora...
+DESEMBARQUE: Voo INTL 50 finalizou o desembarque e liberou o portao/torre.
+DECOLAGEM: Voo INTL 50 aguardando recursos para decolar.
+DECOLAGEM: Voo INTL 50 obteve recursos. Decolando agora...
+SUCESSO: Voo DOM 49 decolou com sucesso e finalizou o ciclo completo!
+SUCESSO: Voo INTL 50 decolou com sucesso e finalizou o ciclo completo!
+INFO: Tempo de simulacao encerrado. Finalizando a criacao de novos voos...
+INFO: Threads de controle e monitor finalizadas.
+INFO: Aguardando operacoes restantes...
+INFO: Modulo Aeroporto finalizado.
+INFO: Simulacao finalizada.
+--- Fim do Log ---
