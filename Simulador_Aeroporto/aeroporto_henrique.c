@@ -6,6 +6,7 @@
 #include <unistd.h>
 #include <time.h>
 #include <string.h>
+#include <errno.h>
 
 // ---- DEFINIÇÃO DE TEMPOS -----
 int TEMPO_TOTAL    = 300;
@@ -21,43 +22,8 @@ int NUM_OP_TORRES = 2;
 // ------------------------------
 
 // ------------ DEFINEs ------------
-#define MAX_AVIOES 4
+#define MAX_AVIOES 50
 // ---------------------------------
-
-// ------------- DEFINIÇÕES DAS FUNÇÕES -------------
-void *rotina_aviao(void *arg);
-void solicitar_pista(int id_aviao);
-void liberar_pista(int id_aviao);
-void solicitar_portao(int id_aviao);
-void liberar_portao(int id_aviao);
-void solicitar_torre(int id_aviao);
-void liberar_torre(int id_aviao);
-void solicitar_pouso(aviao_t *voo);
-void liberar_pouso(aviao_t *voo);
-void solicitar_desembarque(aviao_t *voo);
-void liberar_desembarque(aviao_t *voo);
-void solicitar_decolagem(aviao_t *voo);
-void liberar_decolagem(aviao_t *voo);
-// --------------------------------------------------
-
-// ------------- Variáveis globais -------------
-int contador_avioes = 0;
-bool flag = false;
-// ---------------------------------------------
-
-// ------------- THREADS -------------
-pthread_t threads[MAX_AVIOES];
-// -----------------------------------
-
-// ------------- MUTEXES -------------
-
-// -----------------------------------
-
-// -------------- SEMÁFOROS --------------
-sem_t sem_pistas;
-sem_t sem_portoes;
-sem_t sem_torre_ops;
-// ---------------------------------------
 
 // -------------- STRUCTS --------------
 typedef enum{
@@ -85,6 +51,41 @@ typedef struct {
 } aviao_t;
 // --------------------------------------
 
+// ------------- DEFINIÇÕES DAS FUNÇÕES -------------
+void *rotina_aviao(void *arg);
+int solicitar_pista(aviao_t *aviao);
+void liberar_pista(int id_aviao);
+int solicitar_portao(aviao_t *aviao);
+void liberar_portao(int id_aviao);
+int solicitar_torre(aviao_t *aviao);
+void liberar_torre(int id_aviao);
+int solicitar_pouso(aviao_t *voo);
+void liberar_pouso(aviao_t *voo);
+int solicitar_desembarque(aviao_t *voo);
+void liberar_desembarque(aviao_t *voo);
+int solicitar_decolagem(aviao_t *voo);
+void liberar_decolagem(aviao_t *voo);
+int tentar_solicitar_recurso(sem_t *recurso, aviao_t *aviao, const char* nome_recurso);
+void exibir_relatorio_final(aviao_t* avioes[], int total_avioes);
+// --------------------------------------------------
+
+// ------------- Variáveis globais -------------
+
+// ---------------------------------------------
+
+// ------------- THREADS -------------
+
+// -----------------------------------
+
+// ------------- MUTEXES -------------
+
+// -----------------------------------
+
+// -------------- SEMÁFOROS --------------
+sem_t sem_pistas;
+sem_t sem_portoes;
+sem_t sem_torre_ops;
+// ---------------------------------------
 
 int main(int argc, char* argv[]) {
     if (argc != 8) {
@@ -118,6 +119,10 @@ int main(int argc, char* argv[]) {
     sem_init(&sem_torre_ops, 0, NUM_OP_TORRES);
     printf("Semaforos inicializados!\n\n");
 
+    aviao_t* avioes[MAX_AVIOES];
+    int contador_avioes = 0;
+    bool flag = false;
+
     // Inicializa o gerador de números aleatórios
     srand(time(NULL));
 
@@ -128,21 +133,22 @@ int main(int argc, char* argv[]) {
 
     // Loop principal de criação de aviões
     while (time(NULL) - inicio_simulacao < TEMPO_TOTAL) {
-        if (contador_avioes < MAX_AVIOES) {
-            aviao_t *aviao = malloc(sizeof(aviao_t));
-            if (aviao == NULL) {
-                perror("Falha ao alocar memoria para o aviao");
-                continue; // Pula para a próxima iteração
-            }
-            
-            // Define os atributos do avião
-            aviao->ID = contador_avioes + 1;
-            aviao->tipo = (rand() % 2 == 0) ? DOMESTICO : INTERNACIONAL;
+    if (contador_avioes < MAX_AVIOES) {
+        avioes[contador_avioes] = malloc(sizeof(aviao_t));
+        if (avioes[contador_avioes] == NULL) {
+            perror("Falha ao alocar memoria para o aviao");
+            continue; 
+        }
+        
+        avioes[contador_avioes]->ID = contador_avioes + 1;
+        avioes[contador_avioes]->tipo = (rand() % 2 == 0) ? DOMESTICO : INTERNACIONAL;
+        avioes[contador_avioes]->em_alerta = false;
+        avioes[contador_avioes]->tempo_de_criacao = time(NULL);
 
-            // Cria a thread do avião
-            pthread_create(&threads[contador_avioes], NULL, rotina_aviao, (void *)aviao);
-            
-            contador_avioes++;
+        // Cria a thread e guarda o ID direto na struct
+        pthread_create(&avioes[contador_avioes]->thread_id, NULL, rotina_aviao, (void *)avioes[contador_avioes]);
+        
+        contador_avioes++;
 
             if (contador_avioes == MAX_AVIOES){
                 flag = true;
@@ -150,8 +156,8 @@ int main(int argc, char* argv[]) {
             }
         }
         
-        // Espera um tempo aleatório (0 a 3 segundos) para criar o próximo avião
-        sleep(rand() % 4);
+        // Espera um tempo aleatório (1 a 3 segundos) para criar o próximo avião
+        sleep(rand() % 3 + 1);
     }
 
     if (!flag)
@@ -160,7 +166,7 @@ int main(int argc, char* argv[]) {
         printf("\n--- LIMITE DE AVIOES ATIGINDO! Nao serao criados mais avioes. Aguardando os existentes finalizarem... ---\n");
 
     for (int i = 0; i < contador_avioes; i++) {
-        pthread_join(threads[i], NULL);
+        pthread_join(avioes[i]->thread_id, NULL);
     }
 
     printf("\n--- SIMULACAO FINALIZADA! Todos os avioes concluiram suas operacoes. ---\n");
@@ -169,37 +175,53 @@ int main(int argc, char* argv[]) {
     sem_destroy(&sem_portoes);
     sem_destroy(&sem_torre_ops);
 
+    exibir_relatorio_final(avioes, contador_avioes);
+
+    for (int i = 0; i < contador_avioes; i++) {
+        free(avioes[i]);
+    }
+
     return 0;
 }
 
 void *rotina_aviao(void *arg) {
     aviao_t *aviao = (aviao_t *)arg;
+    aviao->estado = VOANDO;
 
     printf("AVIAO [%d] (tipo: %s) criado e se aproximando do aeroporto.\n", 
            aviao->ID, aviao->tipo == INTERNACIONAL ? "Internacional" : "Domestico");
 
     // --- 1. POUSO ---
-    solicitar_pouso(aviao);
+    aviao->estado = POUSANDO;
+    if (solicitar_pouso(aviao) == -1) {
+        pthread_exit(NULL); // Termina a thread se o avião "caiu"
+    }
     printf("AVIAO [%d] POUSANDO...\n", aviao->ID);
     sleep(2);
     liberar_pouso(aviao);
     printf("AVIAO [%d] POUSO CONCLUIDO.\n\n", aviao->ID);
 
     // --- 2. DESEMBARQUE ---
-    solicitar_desembarque(aviao);
+    aviao->estado = DESEMBARCANDO;
+    if (solicitar_desembarque(aviao) == -1) {
+        pthread_exit(NULL);
+    }
     printf("AVIAO [%d] DESEMBARCANDO PASSAGEIROS...\n", aviao->ID);
     sleep(3);
     liberar_desembarque(aviao);
     printf("AVIAO [%d] DESEMBARQUE CONCLUIDO.\n\n", aviao->ID);
 
     // --- 3. DECOLAGEM ---
-    solicitar_decolagem(aviao);
+    aviao->estado = DECOLANDO;
+    if (solicitar_decolagem(aviao) == -1) {
+        pthread_exit(NULL);
+    }
     printf("AVIAO [%d] DECOLANDO...\n", aviao->ID);
     sleep(2);
     liberar_decolagem(aviao);
     printf("AVIAO [%d] DECOLAGEM CONCLUIDA.\n\n", aviao->ID);
 
-
+    aviao->estado = CONCLUIDO;
     printf("AVIAO [%d] concluiu todas as operacoes com sucesso.\n", aviao->ID);
     
     pthread_exit(NULL);
@@ -208,10 +230,9 @@ void *rotina_aviao(void *arg) {
 
 // ------------------- GERENCIAMENTO DE RECURSOS -------------------
 
-void solicitar_pista(int id_aviao) {
-    printf("AVIAO [%d] solicitando PISTA...\n", id_aviao);
-    sem_wait(&sem_pistas);
-    printf("AVIAO [%d] PISTA alocada.\n", id_aviao);
+int solicitar_pista(aviao_t *aviao) {
+    printf("AVIAO [%d] solicitando PISTA...\n", aviao->ID);
+    return tentar_solicitar_recurso(&sem_pistas, aviao, "PISTA");
 }
 
 void liberar_pista(int id_aviao) {
@@ -219,10 +240,9 @@ void liberar_pista(int id_aviao) {
     sem_post(&sem_pistas);
 }
 
-void solicitar_portao(int id_aviao) {
-    printf("AVIAO [%d] solicitando PORTAO...\n", id_aviao);
-    sem_wait(&sem_portoes);
-    printf("AVIAO [%d] PORTAO alocado.\n", id_aviao);
+int solicitar_portao(aviao_t *aviao) {
+    printf("AVIAO [%d] solicitando PORTAO...\n", aviao->ID);
+    return tentar_solicitar_recurso(&sem_portoes, aviao, "PORTAO");
 }
 
 void liberar_portao(int id_aviao) {
@@ -230,10 +250,9 @@ void liberar_portao(int id_aviao) {
     sem_post(&sem_portoes);
 }
 
-void solicitar_torre(int id_aviao) {
-    printf("AVIAO [%d] solicitando operacao da TORRE...\n", id_aviao);
-    sem_wait(&sem_torre_ops);
-    printf("AVIAO [%d] operacao da TORRE alocada.\n", id_aviao);
+int solicitar_torre(aviao_t *aviao) {
+    printf("AVIAO [%d] solicitando operacao da TORRE...\n", aviao->ID);
+    return tentar_solicitar_recurso(&sem_torre_ops, aviao, "TORRE");
 }
 
 void liberar_torre(int id_aviao) {
@@ -241,18 +260,67 @@ void liberar_torre(int id_aviao) {
     sem_post(&sem_torre_ops);
 }
 
+// Retorna 0 para sucesso, -1 para falha (aviao caiu)
+int tentar_solicitar_recurso(sem_t *recurso, aviao_t *aviao, const char* nome_recurso) {
+    struct timespec ts;
+    time_t tempo_inicio_espera = time(NULL);
+
+    while (1) {
+        // Define o timeout para 1 segundo no futuro
+        clock_gettime(CLOCK_REALTIME, &ts);
+        ts.tv_sec += 1;
+
+        // Tenta pegar o recurso com timeout de 1 segundo
+        if (sem_timedwait(recurso, &ts) == 0) {
+            // Sucesso! Conseguiu o recurso.
+            printf("AVIAO [%d] conseguiu alocar %s.\n", aviao->ID, nome_recurso);
+            return 0; 
+        }
+
+        if (errno != ETIMEDOUT) {
+            perror("sem_timedwait");
+            return -1;
+        }
+
+        // Se chegou aqui, não conseguiu o recurso. Verifica o tempo total de espera.
+        time_t tempo_espera_total = time(NULL) - tempo_inicio_espera;
+
+        // Verifica se o avião "caiu"
+        if (tempo_espera_total >= FALHA) {
+            aviao->estado = FALHA_OPERACIONAL;
+            printf("\n!!! FALHA OPERACIONAL !!! AVIAO [%d] 'caiu' esperando por %s por %ld segundos.\n\n", 
+                   aviao->ID, nome_recurso, tempo_espera_total);
+            return -1; // Sinaliza falha
+        }
+
+        // Verifica se entrou em estado de alerta crítico
+        if (tempo_espera_total >= ALERTA_CRITICO && !aviao->em_alerta) {
+            aviao->em_alerta = true;
+            printf("\n!!! ALERTA CRITICO !!! AVIAO [%d] esperando por %s por %ld segundos.\n\n", 
+                   aviao->ID, nome_recurso, tempo_espera_total);
+        }
+    }
+}
+
 // ----------------------------------------------------------------------
 
 // ------------------- POUSO, DESEMBARQUE E DECOLAGEM -------------------
 
-void solicitar_pouso(aviao_t *voo) {
-    if (voo->tipo == INTERNACIONAL) {
-        solicitar_pista(voo->ID);
-        solicitar_torre(voo->ID);
-    } else { // DOMESTICO
-        solicitar_torre(voo->ID);
-        solicitar_pista(voo->ID);
+int solicitar_pouso(aviao_t *voo) {
+    if (voo->tipo == INTERNACIONAL) { // Pista -> Torre
+        if (solicitar_pista(voo) == -1) return -1;
+        if (solicitar_torre(voo) == -1) {
+            liberar_pista(voo->ID);
+            return -1;
+        }
+    } else { // Torre -> Pista
+        if (solicitar_torre(voo) == -1) return -1;
+        if (solicitar_pista(voo) == -1) {
+            liberar_torre(voo->ID);
+            return -1;
+        }
     }
+    return 0;
 }
 
 void liberar_pouso(aviao_t *voo) {
@@ -260,37 +328,90 @@ void liberar_pouso(aviao_t *voo) {
     liberar_torre(voo->ID);
 }
 
-void solicitar_desembarque(aviao_t *voo) {
-    if (voo->tipo == INTERNACIONAL) {
-        solicitar_portao(voo->ID);
-        solicitar_torre(voo->ID);
-    } else { // DOMESTICO
-        solicitar_torre(voo->ID);
-        solicitar_portao(voo->ID);
+int solicitar_desembarque(aviao_t *voo) {
+    if (voo->tipo == INTERNACIONAL) { // Portão -> Torre
+        if (solicitar_portao(voo) == -1) return -1;
+        if (solicitar_torre(voo) == -1) {
+            liberar_portao(voo->ID);
+            return -1;
+        }
+    } else { // Torre -> Portão
+        if (solicitar_torre(voo) == -1) return -1;
+        if (solicitar_portao(voo) == -1) {
+            liberar_torre(voo->ID);
+            return -1;
+        }
     }
+    return 0;
 }
 
 void liberar_desembarque(aviao_t *voo) {
     liberar_torre(voo->ID);
     printf("AVIAO [%d] servicos de solo em andamento no portao.\n", voo->ID);
-    sleep(5);
+    sleep(3);
     liberar_portao(voo->ID);
 }
 
-void solicitar_decolagem(aviao_t *voo) {
-    if (voo->tipo == INTERNACIONAL) {
-        solicitar_portao(voo->ID);
-        solicitar_pista(voo->ID);
-        solicitar_torre(voo->ID);
-    } else { // DOMESTICO
-        solicitar_torre(voo->ID);
-        solicitar_portao(voo->ID);
-        solicitar_pista(voo->ID);
+int solicitar_decolagem(aviao_t *voo) {
+    if (voo->tipo == INTERNACIONAL) { // Portão -> Pista -> Torre
+        if (solicitar_portao(voo) == -1) return -1;
+        if (solicitar_pista(voo) == -1) {
+            liberar_portao(voo->ID);
+            return -1;
+        }
+        if (solicitar_torre(voo) == -1) {
+            liberar_portao(voo->ID);
+            liberar_pista(voo->ID);
+            return -1;
+        }
+    } else { // Torre -> Portão -> Pista
+        if (solicitar_torre(voo) == -1) return -1;
+        if (solicitar_portao(voo) == -1) {
+            liberar_torre(voo->ID);
+            return -1;
+        }
+        if (solicitar_pista(voo) == -1) {
+            liberar_torre(voo->ID);
+            liberar_portao(voo->ID);
+            return -1;
+        }
     }
+    return 0;
 }
 
 void liberar_decolagem(aviao_t *voo) {
     liberar_torre(voo->ID);
     liberar_portao(voo->ID);
     liberar_pista(voo->ID);
+}
+
+// ------------------- RELATÓRIO FINAL -------------------
+
+void exibir_relatorio_final(aviao_t* avioes[], int total_avioes) {
+    printf("\n\n--- RELATORIO FINAL DA SIMULACAO ---\n");
+    printf("--------------------------------------\n");
+
+    int sucessos = 0, falhas_starvation = 0, domesticos = 0, internacionais = 0;
+    const char* estado_str[] = { "VOANDO", "POUSANDO", "DESEMBARCANDO", "AGUARDANDO DECOLAGEM", "DECOLANDO", "CONCLUIDO", "FALHA OPERACIONAL" };
+
+    printf("Estado final de cada aviao:\n");
+    for (int i = 0; i < total_avioes; i++) {
+        printf(" - Aviao ID: %-3d | Tipo: %-13s | Estado Final: %s\n",
+               avioes[i]->ID,
+               avioes[i]->tipo == DOMESTICO ? "Domestico" : "Internacional",
+               estado_str[avioes[i]->estado]);
+        
+        if (avioes[i]->estado == CONCLUIDO) sucessos++;
+        else if (avioes[i]->estado == FALHA_OPERACIONAL) falhas_starvation++;
+        if (avioes[i]->tipo == DOMESTICO) domesticos++;
+        else internacionais++;
+    }
+
+    printf("\nResumo das Metricas:\n");
+    printf(" - Total de avioes criados: %d\n", total_avioes);
+    printf("   - Voos Domesticos: %d\n", domesticos);
+    printf("   - Voos Internacionais: %d\n", internacionais);
+    printf(" - Operacoes concluidas com sucesso: %d\n", sucessos);
+    printf(" - Falhas operacionais (starvation): %d\n", falhas_starvation);
+    printf("--------------------------------------\n");
 }
