@@ -27,7 +27,7 @@ int NUM_OP_TORRES = 2;
 #define PRIORIDADE_BASE_INTERNACIONAL 13 // Maior prioridade para internacionais
 #define AGING_INCREMENT 1
 #define AGING_INTERVAL 5  // Incrementa prioridade a cada 5 segundos
-#define MAX_DEADLOCK_WARNINGS 1        // Limite de avisos de deadlock
+#define MAX_DEADLOCK_WARNINGS 2        // Limite de avisos de deadlock
 // ---------------------------------
 
 // -------------- STRUCTS --------------
@@ -839,9 +839,9 @@ int solicitar_pouso(aviao_t *aviao) {
     
     // Domésticos sempre usam ordem simplificada: Pista → Torre
     if (aviao->tipo == DOMESTICO) {
-        if (solicitar_pista(aviao) == -1) return -1;
-        if (solicitar_torre(aviao) == -1) {
-            liberar_pista(aviao);
+        if (solicitar_torre(aviao) == -1) return -1;
+        if (solicitar_pista(aviao) == -1) {
+            liberar_torre(aviao);
             return -1;
         }
     } else {
@@ -869,9 +869,9 @@ int solicitar_desembarque(aviao_t *aviao) {
     
     // Domésticos sempre usam ordem simplificada: Portão → Torre
     if (aviao->tipo == DOMESTICO) {
-        if (solicitar_portao(aviao) == -1) return -1;
-        if (solicitar_torre(aviao) == -1) {
-            liberar_portao(aviao);
+        if (solicitar_torre(aviao) == -1) return -1;
+        if (solicitar_portao(aviao) == -1) {
+            liberar_torre(aviao);
             return -1;
         }
     } else {
@@ -900,13 +900,13 @@ int solicitar_decolagem(aviao_t *aviao) {
     
     // Domésticos usam ordem simplificada: Portão → Pista → Torre
     if (aviao->tipo == DOMESTICO) {
-        if (solicitar_portao(aviao) == -1) return -1;
-        if (solicitar_pista(aviao) == -1) {
-            liberar_portao(aviao);
+        if (solicitar_torre(aviao) == -1) return -1;
+        if (solicitar_portao(aviao) == -1) {
+            liberar_torre(aviao);
             return -1;
         }
-        if (solicitar_torre(aviao) == -1) {
-            liberar_pista(aviao);
+        if (solicitar_pista(aviao) == -1) {
+            liberar_torre(aviao);
             liberar_portao(aviao);
             return -1;
         }
