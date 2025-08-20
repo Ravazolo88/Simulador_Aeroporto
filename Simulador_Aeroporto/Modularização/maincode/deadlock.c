@@ -82,7 +82,7 @@ void* thread_detectar_deadlock(void* arg) {
             contador_deadlocks++;
             pthread_mutex_unlock(&mutex_contadores);
             
-            printf("\nPOSSÍVEL DEADLOCK DETECTADO\n");
+            log_message("[DEADLOCK] Possivel deadlock detectado. Iniciando verificacao.\n");
             
             pthread_mutex_lock(&detector.mutex);
             for (int i = 0; i < MAX_AVIOES; i++) {
@@ -97,7 +97,7 @@ void* thread_detectar_deadlock(void* arg) {
                         if (avioes_com_warnings[k] && avioes_com_warnings[k]->ID == i + 1) {
                             avioes_com_warnings[k]->deadlock_warnings++;
                             if (avioes_com_warnings[k]->deadlock_warnings >= MAX_DEADLOCK_WARNINGS) {
-                                printf("⚠️ AVIÃO [%03d] atingiu %d warnings - recursos serão realocados\n", 
+                                log_message("[DEADLOCK] Aviao [%03d] atingiu o limite de %d avisos.\n", 
                                        avioes_com_warnings[k]->ID, MAX_DEADLOCK_WARNINGS);
                             }
                             break;
@@ -140,7 +140,7 @@ void realocar_recursos_avioes_warning() {
     for (int i = 0; i < num_avioes_warnings; i++) {
         aviao_t* aviao = avioes_com_warnings[i];
         if (aviao && aviao_tem_muitos_warnings(aviao) && !aviao->recursos_realocados) {
-            printf("🔄 Realocando recursos do AVIÃO [%03d] devido a warnings excessivos\n", aviao->ID);
+            log_message("[DEADLOCK] Realocando recursos do Aviao [%03d] para resolver o impasse.\n", aviao->ID);
             
             pthread_mutex_lock(&detector.mutex);
             for (int j = 0; j < 3; j++) {

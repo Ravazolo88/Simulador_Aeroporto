@@ -31,7 +31,7 @@ $(OBJ_DIR)/%.o: $(MAIN_DIR)/%.c
 .PHONY: run
 run: all
 	@echo "--- Executando o Simulador ---"
-	@./$(TARGET)
+	@./$(TARGET) 1 3 5 2 120 60 90
 
 .PHONY: clean
 clean:

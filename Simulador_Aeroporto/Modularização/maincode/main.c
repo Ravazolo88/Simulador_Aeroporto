@@ -2,13 +2,11 @@
 
 int main(int argc, char* argv[]) {
     if (argc != 8) {
-        // Usamos fprintf para stderr em caso de erro antes do log ser inicializado.
         fprintf(stderr, "Uso: %s <torres> <pistas> <portoes> <op_torres> <tempo_total> <alerta_critico> <falha>\n", argv[0]);
         fprintf(stderr, "Exemplo: %s 1 3 5 2 300 60 90\n", argv[0]);
         return 1;
     }
     
-    // Inicializa o sistema de log. O arquivo "simulacao.log" será criado/sobrescrito.
     log_init("simulacao.log");
 
     NUM_TORRES = atoi(argv[1]);
@@ -19,22 +17,21 @@ int main(int argc, char* argv[]) {
     ALERTA_CRITICO = atoi(argv[6]);
     FALHA = atoi(argv[7]);
 
-    log_message("\n========================================\n");
-    log_message("  SIMULAÇÃO DE CONTROLE DE TRÁFEGO AÉREO\n");
-    log_message("========================================\n\n");
-    log_message("Parâmetros da simulação:\n");
-    log_message("---------------------------------------------\n");
-    log_message("Torres de Controle: %d\n", NUM_TORRES);
-    log_message("Pistas: %d\n", NUM_PISTAS);
-    log_message("Portões: %d\n", NUM_PORTOES);
-    log_message("Operações simultâneas por Torre: %d\n", NUM_OP_TORRES);
-    log_message("Tempo total de simulação: %d segundos\n", TEMPO_TOTAL);
-    log_message("Tempo para alerta crítico: %d segundos\n", ALERTA_CRITICO);
-    log_message("Tempo para falha: %d segundos\n", FALHA);
-    log_message("---------------------------------------------\n\n");
+    log_message("======================================================\n");
+    log_message("     SIMULACAO DE CONTROLE DE TRAFEGO AEREO\n");
+    log_message("======================================================\n\n");
+    log_message("[SISTEMA] Parametros da simulacao:\n");
+    log_message("------------------------------------------------------\n");
+    log_message("- Torres de Controle: %d\n", NUM_TORRES);
+    log_message("- Pistas: %d\n", NUM_PISTAS);
+    log_message("- Portoes: %d\n", NUM_PORTOES);
+    log_message("- Operacoes simultaneas por Torre: %d\n", NUM_OP_TORRES);
+    log_message("- Tempo total de simulacao: %d segundos\n", TEMPO_TOTAL);
+    log_message("- Tempo para alerta critico: %d segundos\n", ALERTA_CRITICO);
+    log_message("- Tempo para falha: %d segundos\n", FALHA);
+    log_message("------------------------------------------------------\n\n");
 
-    // Inicialização
-    log_message("Inicializando sistema...\n");
+    log_message("[SISTEMA] Inicializando simulacao...\n");
     sem_init(&sem_pistas, 0, NUM_PISTAS);
     sem_init(&sem_portoes, 0, NUM_PORTOES);
     sem_init(&sem_torre_ops, 0, NUM_OP_TORRES);
@@ -60,13 +57,13 @@ int main(int argc, char* argv[]) {
     srand(time(NULL));
     time_t inicio_simulacao = time(NULL);
 
-    log_message("\n--- SIMULAÇÃO INICIADA ---\n\n");
+    log_message("\n[SISTEMA] --- SIMULACAO INICIADA ---\n\n");
 
     while (time(NULL) - inicio_simulacao < TEMPO_TOTAL && !limite_atingido) {
         if (contador_avioes < MAX_AVIOES) {
             avioes[contador_avioes] = malloc(sizeof(aviao_t));
             if (avioes[contador_avioes] == NULL) {
-                perror("Falha ao alocar memória para o avião");
+                perror("Falha ao alocar memoria para o aviao");
                 continue;
             }
 
@@ -81,24 +78,24 @@ int main(int argc, char* argv[]) {
 
             pthread_create(&avioes[contador_avioes]->thread_id, NULL, rotina_aviao, (void *)avioes[contador_avioes]);
 
-            log_message("AVIÃO [%03d] (%s) criado e se aproximando do aeroporto.\n",
+            log_message("[AVIAO %03d] Criado (%s), aproximando-se do aeroporto.\n",
                    avioes[contador_avioes]->ID,
-                   avioes[contador_avioes]->tipo == INTERNACIONAL ? "Internacional" : "Doméstico");
+                   avioes[contador_avioes]->tipo == INTERNACIONAL ? "Internacional" : "Domestico");
 
             contador_avioes++;
             if (contador_avioes == MAX_AVIOES) {
                 limite_atingido = true;
             }
         }
-        sleep(rand() % 3 + 1);
+        sleep(rand() % 1 + 1);
     }
 
     sistema_ativo = false;
 
     if (!limite_atingido)
-        log_message("\nTEMPO ESGOTADO! Não serão criados mais aviões. Aguardando os existentes finalizarem...\n");
+        log_message("\n[SISTEMA] TEMPO ESGOTADO! Nenhum aviao novo sera criado. Aguardando existentes...\n");
     else
-        log_message("\nLIMITE DE AVIÕES ATINGIDO! Aguardando os existentes finalizarem...\n");
+        log_message("\n[SISTEMA] LIMITE DE AVIOES ATINGIDO! Aguardando existentes...\n");
 
     for (int i = 0; i < contador_avioes; i++) {
         pthread_join(avioes[i]->thread_id, NULL);
@@ -109,7 +106,7 @@ int main(int argc, char* argv[]) {
     pthread_join(thread_aging, NULL);
     pthread_join(thread_detector_deadlock, NULL);
 
-    log_message("\nSIMULAÇÃO FINALIZADA! Todos os aviões concluíram suas operações.\n");
+    log_message("\n[SISTEMA] SIMULACAO FINALIZADA! Todos os avioes concluintes suas operacoes.\n");
 
     sem_destroy(&sem_pistas);
     sem_destroy(&sem_portoes);
@@ -129,7 +126,6 @@ int main(int argc, char* argv[]) {
     pthread_mutex_destroy(&mutex_warnings);
     pthread_mutex_destroy(&detector.mutex);
 
-    // Fecha o arquivo de log antes de terminar.
     log_close();
 
     return 0;

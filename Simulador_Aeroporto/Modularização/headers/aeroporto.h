@@ -26,12 +26,12 @@ extern int NUM_TORRES;
 extern int NUM_OP_TORRES;
 
 // ------------ DEFINES ------------
-#define MAX_AVIOES 50
+#define MAX_AVIOES 200
 #define PRIORIDADE_BASE_DOMESTICO   8
 #define PRIORIDADE_BASE_INTERNACIONAL 13
 #define AGING_INCREMENT 1
 #define AGING_INTERVAL 5
-#define MAX_DEADLOCK_WARNINGS 1000
+#define MAX_DEADLOCK_WARNINGS 6
 
 // -------------- STRUCTS --------------
 typedef enum {
