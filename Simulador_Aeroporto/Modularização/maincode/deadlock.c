@@ -82,7 +82,7 @@ void* thread_detectar_deadlock(void* arg) {
             contador_deadlocks++;
             pthread_mutex_unlock(&mutex_contadores);
             
-            printf("\n🔒🔒🔒 POSSÍVEL DEADLOCK DETECTADO 🔒🔒🔒\n");
+            printf("\nPOSSÍVEL DEADLOCK DETECTADO\n");
             
             pthread_mutex_lock(&detector.mutex);
             for (int i = 0; i < MAX_AVIOES; i++) {

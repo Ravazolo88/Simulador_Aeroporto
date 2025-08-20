@@ -1,0 +1,570 @@
+--- Log da Simulação do Aeroporto ---
+[2025-08-20 13:43:29] 
+========================================
+[2025-08-20 13:43:29]   SIMULAÇÃO DE CONTROLE DE TRÁFEGO AÉREO
+[2025-08-20 13:43:29] ========================================
+
+[2025-08-20 13:43:29] Parâmetros da simulação:
+[2025-08-20 13:43:29] ---------------------------------------------
+[2025-08-20 13:43:29] Torres de Controle: 1
+[2025-08-20 13:43:29] Pistas: 3
+[2025-08-20 13:43:29] Portões: 5
+[2025-08-20 13:43:29] Operações simultâneas por Torre: 2
+[2025-08-20 13:43:29] Tempo total de simulação: 120 segundos
+[2025-08-20 13:43:29] Tempo para alerta crítico: 60 segundos
+[2025-08-20 13:43:29] Tempo para falha: 90 segundos
+[2025-08-20 13:43:29] ---------------------------------------------
+
+[2025-08-20 13:43:29] Inicializando sistema...
+[2025-08-20 13:43:29] 
+--- SIMULAÇÃO INICIADA ---
+
+[2025-08-20 13:43:29] AVIÃO [001] (Doméstico) criado e se aproximando do aeroporto.
+[2025-08-20 13:43:29] AVIAO [001]: Iniciando procedimento de pouso.
+[2025-08-20 13:43:29] AVIAO [001]: Pouso em andamento (2 segundos).
+[2025-08-20 13:43:31] AVIAO [001]: Pouso concluido. Recursos liberados.
+
+[2025-08-20 13:43:31] AVIAO [001]: Iniciando procedimento de desembarque.
+[2025-08-20 13:43:31] AVIAO [001]: Desembarque de passageiros em andamento (3 segundos).
+[2025-08-20 13:43:32] AVIÃO [002] (Internacional) criado e se aproximando do aeroporto.
+[2025-08-20 13:43:32] AVIAO [002]: Iniciando procedimento de pouso.
+[2025-08-20 13:43:32] AVIAO [002]: Pouso em andamento (2 segundos).
+[2025-08-20 13:43:34] AVIAO [002]: Pouso concluido. Recursos liberados.
+
+[2025-08-20 13:43:34] AVIAO [002]: Iniciando procedimento de desembarque.
+[2025-08-20 13:43:34] AVIAO [002]: Desembarque de passageiros em andamento (3 segundos).
+[2025-08-20 13:43:34] AVIÃO [003] (Doméstico) criado e se aproximando do aeroporto.
+[2025-08-20 13:43:34] AVIAO [003]: Iniciando procedimento de pouso.
+[2025-08-20 13:43:34] AVIAO [003]: Pouso em andamento (2 segundos).
+[2025-08-20 13:43:34] AVIAO [001]: Desembarque concluido. Recursos liberados.
+
+[2025-08-20 13:43:34] AVIAO [001]: Iniciando procedimento de decolagem.
+[2025-08-20 13:43:33] AVIÃO [004] (Internacional) criado e se aproximando do aeroporto.
+[2025-08-20 13:43:33] AVIAO [004]: Iniciando procedimento de pouso.
+[2025-08-20 13:43:33] AVIAO [003]: Pouso concluido. Recursos liberados.
+
+[2025-08-20 13:43:33] AVIAO [003]: Iniciando procedimento de desembarque.
+[2025-08-20 13:43:33] AVIAO [001]: Decolagem em andamento (2 segundos).
+[2025-08-20 13:43:34] AVIÃO [005] (Doméstico) criado e se aproximando do aeroporto.
+[2025-08-20 13:43:34] AVIAO [005]: Iniciando procedimento de pouso.
+[2025-08-20 13:43:34] AVIAO [004]: Pouso em andamento (2 segundos).
+[2025-08-20 13:43:35] AVIAO [002]: Desembarque concluido. Recursos liberados.
+
+[2025-08-20 13:43:35] AVIAO [002]: Iniciando procedimento de decolagem.
+[2025-08-20 13:43:35] AVIAO [001]: Decolagem concluida. Recursos liberados.
+
+[2025-08-20 13:43:35] AVIAO [001]: Todas as operacoes foram concluidas com sucesso.
+[2025-08-20 13:43:35] AVIAO [002]: Decolagem em andamento (2 segundos).
+[2025-08-20 13:43:35] AVIÃO [006] (Doméstico) criado e se aproximando do aeroporto.
+[2025-08-20 13:43:35] AVIAO [006]: Iniciando procedimento de pouso.
+[2025-08-20 13:43:36] AVIAO [004]: Pouso concluido. Recursos liberados.
+
+[2025-08-20 13:43:36] AVIAO [004]: Iniciando procedimento de desembarque.
+[2025-08-20 13:43:36] AVIAO [003]: Desembarque de passageiros em andamento (3 segundos).
+[2025-08-20 13:43:37] AVIÃO [007] (Doméstico) criado e se aproximando do aeroporto.
+[2025-08-20 13:43:37] AVIAO [007]: Iniciando procedimento de pouso.
+[2025-08-20 13:43:37] AVIAO [002]: Decolagem concluida. Recursos liberados.
+
+[2025-08-20 13:43:37] AVIAO [002]: Todas as operacoes foram concluidas com sucesso.
+[2025-08-20 13:43:37] AVIAO [004]: Desembarque de passageiros em andamento (3 segundos).
+[2025-08-20 13:43:38] AVIÃO [008] (Internacional) criado e se aproximando do aeroporto.
+[2025-08-20 13:43:38] AVIAO [008]: Iniciando procedimento de pouso.
+[2025-08-20 13:43:39] AVIAO [008]: Pouso em andamento (2 segundos).
+[2025-08-20 13:43:40] AVIAO [003]: Desembarque concluido. Recursos liberados.
+
+[2025-08-20 13:43:40] AVIAO [003]: Iniciando procedimento de decolagem.
+[2025-08-20 13:43:40] AVIAO [005]: Pouso em andamento (2 segundos).
+[2025-08-20 13:43:41] AVIÃO [009] (Doméstico) criado e se aproximando do aeroporto.
+[2025-08-20 13:43:41] AVIAO [009]: Iniciando procedimento de pouso.
+[2025-08-20 13:43:41] AVIAO [004]: Desembarque concluido. Recursos liberados.
+
+[2025-08-20 13:43:41] AVIAO [004]: Iniciando procedimento de decolagem.
+[2025-08-20 13:43:42] AVIAO [008]: Pouso concluido. Recursos liberados.
+
+[2025-08-20 13:43:42] AVIAO [008]: Iniciando procedimento de desembarque.
+[2025-08-20 13:43:42] AVIAO [004]: Decolagem em andamento (2 segundos).
+[2025-08-20 13:43:42] AVIÃO [010] (Doméstico) criado e se aproximando do aeroporto.
+[2025-08-20 13:43:42] AVIAO [010]: Iniciando procedimento de pouso.
+[2025-08-20 13:43:42] AVIAO [005]: Pouso concluido. Recursos liberados.
+
+[2025-08-20 13:43:42] AVIAO [005]: Iniciando procedimento de desembarque.
+[2025-08-20 13:43:42] AVIAO [008]: Desembarque de passageiros em andamento (3 segundos).
+[2025-08-20 13:43:44] AVIAO [004]: Decolagem concluida. Recursos liberados.
+
+[2025-08-20 13:43:44] AVIAO [004]: Todas as operacoes foram concluidas com sucesso.
+[2025-08-20 13:43:44] AVIAO [006]: Pouso em andamento (2 segundos).
+[2025-08-20 13:43:45] AVIÃO [011] (Internacional) criado e se aproximando do aeroporto.
+[2025-08-20 13:43:45] AVIAO [011]: Iniciando procedimento de pouso.
+[2025-08-20 13:43:46] AVIAO [011]: Pouso em andamento (2 segundos).
+[2025-08-20 13:43:46] AVIAO [006]: Pouso concluido. Recursos liberados.
+
+[2025-08-20 13:43:46] AVIAO [006]: Iniciando procedimento de desembarque.
+[2025-08-20 13:43:46] AVIAO [007]: Pouso em andamento (2 segundos).
+[2025-08-20 13:43:46] AVIAO [008]: Desembarque concluido. Recursos liberados.
+
+[2025-08-20 13:43:46] AVIAO [008]: Iniciando procedimento de decolagem.
+[2025-08-20 13:43:47] AVIÃO [012] (Doméstico) criado e se aproximando do aeroporto.
+[2025-08-20 13:43:47] AVIAO [012]: Iniciando procedimento de pouso.
+[2025-08-20 13:43:48] AVIAO [011]: Pouso concluido. Recursos liberados.
+
+[2025-08-20 13:43:48] AVIAO [011]: Iniciando procedimento de desembarque.
+[2025-08-20 13:43:48] AVIAO [008]: Decolagem em andamento (2 segundos).
+[2025-08-20 13:43:48] AVIAO [007]: Pouso concluido. Recursos liberados.
+
+[2025-08-20 13:43:48] AVIAO [007]: Iniciando procedimento de desembarque.
+[2025-08-20 13:43:48] AVIAO [011]: Desembarque de passageiros em andamento (3 segundos).
+[2025-08-20 13:43:50] AVIAO [008]: Decolagem concluida. Recursos liberados.
+
+[2025-08-20 13:43:50] AVIAO [008]: Todas as operacoes foram concluidas com sucesso.
+[2025-08-20 13:43:50] AVIAO [003]: Decolagem em andamento (2 segundos).
+[2025-08-20 13:43:50] AVIÃO [013] (Internacional) criado e se aproximando do aeroporto.
+[2025-08-20 13:43:50] AVIAO [013]: Iniciando procedimento de pouso.
+[2025-08-20 13:43:51] AVIAO [013]: Pouso em andamento (2 segundos).
+[2025-08-20 13:43:51] AVIAO [011]: Desembarque concluido. Recursos liberados.
+
+[2025-08-20 13:43:51] AVIAO [011]: Iniciando procedimento de decolagem.
+[2025-08-20 13:43:52] AVIAO [003]: Decolagem concluida. Recursos liberados.
+
+[2025-08-20 13:43:52] AVIAO [003]: Todas as operacoes foram concluidas com sucesso.
+[2025-08-20 13:43:52] AVIAO [009]: Pouso em andamento (2 segundos).
+[2025-08-20 13:43:53] AVIAO [013]: Pouso concluido. Recursos liberados.
+
+[2025-08-20 13:43:53] AVIAO [013]: Iniciando procedimento de desembarque.
+[2025-08-20 13:43:53] AVIÃO [014] (Doméstico) criado e se aproximando do aeroporto.
+[2025-08-20 13:43:53] AVIAO [014]: Iniciando procedimento de pouso.
+[2025-08-20 13:43:53] AVIAO [011]: Decolagem em andamento (2 segundos).
+[2025-08-20 13:43:54] AVIAO [009]: Pouso concluido. Recursos liberados.
+
+[2025-08-20 13:43:54] AVIAO [009]: Iniciando procedimento de desembarque.
+[2025-08-20 13:43:54] AVIAO [013]: Desembarque de passageiros em andamento (3 segundos).
+[2025-08-20 13:43:55] AVIÃO [015] (Internacional) criado e se aproximando do aeroporto.
+[2025-08-20 13:43:55] AVIAO [011]: Decolagem concluida. Recursos liberados.
+
+[2025-08-20 13:43:55] AVIAO [011]: Todas as operacoes foram concluidas com sucesso.
+[2025-08-20 13:43:55] AVIAO [010]: Pouso em andamento (2 segundos).
+[2025-08-20 13:43:55] AVIAO [015]: Iniciando procedimento de pouso.
+[2025-08-20 13:43:57] AVIAO [010]: Pouso concluido. Recursos liberados.
+
+[2025-08-20 13:43:57] AVIAO [010]: Iniciando procedimento de desembarque.
+[2025-08-20 13:43:57] AVIAO [005]: Desembarque de passageiros em andamento (3 segundos).
+[2025-08-20 13:43:57] AVIAO [015]: Pouso em andamento (2 segundos).
+[2025-08-20 13:43:57] AVIAO [013]: Desembarque concluido. Recursos liberados.
+
+[2025-08-20 13:43:57] AVIAO [013]: Iniciando procedimento de decolagem.
+[2025-08-20 13:43:58] AVIÃO [016] (Doméstico) criado e se aproximando do aeroporto.
+[2025-08-20 13:43:58] AVIAO [016]: Iniciando procedimento de pouso.
+[2025-08-20 13:43:59] AVIÃO [017] (Doméstico) criado e se aproximando do aeroporto.
+[2025-08-20 13:43:59] AVIAO [017]: Iniciando procedimento de pouso.
+[2025-08-20 13:43:59] AVIAO [015]: Pouso concluido. Recursos liberados.
+
+[2025-08-20 13:43:59] AVIAO [015]: Iniciando procedimento de desembarque.
+[2025-08-20 13:43:59] AVIAO [013]: Decolagem em andamento (2 segundos).
+[2025-08-20 13:44:00] AVIAO [006]: Desembarque de passageiros em andamento (3 segundos).
+[2025-08-20 13:44:00] AVIAO [005]: Desembarque concluido. Recursos liberados.
+
+[2025-08-20 13:44:00] AVIAO [005]: Iniciando procedimento de decolagem.
+[2025-08-20 13:44:01] AVIÃO [018] (Internacional) criado e se aproximando do aeroporto.
+[2025-08-20 13:44:01] AVIAO [018]: Iniciando procedimento de pouso.
+[2025-08-20 13:44:01] AVIAO [013]: Decolagem concluida. Recursos liberados.
+
+[2025-08-20 13:44:01] AVIAO [013]: Todas as operacoes foram concluidas com sucesso.
+[2025-08-20 13:44:01] AVIAO [012]: Pouso em andamento (2 segundos).
+[2025-08-20 13:44:02] AVIÃO [019] (Doméstico) criado e se aproximando do aeroporto.
+[2025-08-20 13:44:02] AVIAO [019]: Iniciando procedimento de pouso.
+[2025-08-20 13:44:03] AVIAO [007]: Desembarque de passageiros em andamento (3 segundos).
+[2025-08-20 13:44:03] AVIAO [012]: Pouso concluido. Recursos liberados.
+
+[2025-08-20 13:44:03] AVIAO [012]: Iniciando procedimento de desembarque.
+[2025-08-20 13:44:03] AVIAO [015]: Desembarque de passageiros em andamento (3 segundos).
+[2025-08-20 13:44:03] AVIAO [006]: Desembarque concluido. Recursos liberados.
+
+[2025-08-20 13:44:03] AVIAO [006]: Iniciando procedimento de decolagem.
+[2025-08-20 13:44:05] AVIÃO [020] (Internacional) criado e se aproximando do aeroporto.
+[2025-08-20 13:44:05] AVIAO [020]: Iniciando procedimento de pouso.
+[2025-08-20 13:44:06] AVIAO [014]: Pouso em andamento (2 segundos).
+[2025-08-20 13:44:06] AVIAO [009]: Desembarque de passageiros em andamento (3 segundos).
+[2025-08-20 13:44:06] AVIAO [007]: Desembarque concluido. Recursos liberados.
+
+[2025-08-20 13:44:06] AVIAO [007]: Iniciando procedimento de decolagem.
+[2025-08-20 13:44:06] AVIAO [015]: Desembarque concluido. Recursos liberados.
+
+[2025-08-20 13:44:06] AVIAO [015]: Iniciando procedimento de decolagem.
+[2025-08-20 13:44:07] AVIÃO [021] (Internacional) criado e se aproximando do aeroporto.
+[2025-08-20 13:44:07] AVIAO [021]: Iniciando procedimento de pouso.
+[2025-08-20 13:44:05] AVIAO [014]: Pouso concluido. Recursos liberados.
+
+[2025-08-20 13:44:05] AVIAO [014]: Iniciando procedimento de desembarque.
+[2025-08-20 13:44:05] AVIAO [018]: Pouso em andamento (2 segundos).
+[2025-08-20 13:44:06] AVIÃO [022] (Internacional) criado e se aproximando do aeroporto.
+[2025-08-20 13:44:06] AVIAO [022]: Iniciando procedimento de pouso.
+[2025-08-20 13:44:06] AVIAO [020]: Pouso em andamento (2 segundos).
+[2025-08-20 13:44:07] AVIAO [009]: Desembarque concluido. Recursos liberados.
+
+[2025-08-20 13:44:07] AVIAO [009]: Iniciando procedimento de decolagem.
+[2025-08-20 13:44:07] AVIAO [018]: Pouso concluido. Recursos liberados.
+
+[2025-08-20 13:44:07] AVIAO [018]: Iniciando procedimento de desembarque.
+[2025-08-20 13:44:07] AVIAO [015]: Decolagem em andamento (2 segundos).
+[2025-08-20 13:44:07] AVIÃO [023] (Doméstico) criado e se aproximando do aeroporto.
+[2025-08-20 13:44:07] AVIAO [023]: Iniciando procedimento de pouso.
+[2025-08-20 13:44:08] AVIAO [020]: Pouso concluido. Recursos liberados.
+
+[2025-08-20 13:44:08] AVIAO [020]: Iniciando procedimento de desembarque.
+[2025-08-20 13:44:08] AVIAO [021]: Pouso em andamento (2 segundos).
+[2025-08-20 13:44:09] AVIÃO [024] (Doméstico) criado e se aproximando do aeroporto.
+[2025-08-20 13:44:09] AVIAO [024]: Iniciando procedimento de pouso.
+[2025-08-20 13:44:09] AVIAO [015]: Decolagem concluida. Recursos liberados.
+
+[2025-08-20 13:44:09] AVIAO [015]: Todas as operacoes foram concluidas com sucesso.
+[2025-08-20 13:44:09] AVIAO [010]: Desembarque de passageiros em andamento (3 segundos).
+[2025-08-20 13:44:10] AVIAO [021]: Pouso concluido. Recursos liberados.
+
+[2025-08-20 13:44:10] AVIAO [021]: Iniciando procedimento de desembarque.
+[2025-08-20 13:44:10] AVIAO [016]: Pouso em andamento (2 segundos).
+[2025-08-20 13:44:11] AVIÃO [025] (Doméstico) criado e se aproximando do aeroporto.
+[2025-08-20 13:44:11] AVIAO [025]: Iniciando procedimento de pouso.
+[2025-08-20 13:44:12] AVIAO [017]: Pouso em andamento (2 segundos).
+[2025-08-20 13:44:12] AVIÃO [026] (Internacional) criado e se aproximando do aeroporto.
+[2025-08-20 13:44:12] AVIAO [026]: Iniciando procedimento de pouso.
+[2025-08-20 13:44:12] AVIAO [016]: Pouso concluido. Recursos liberados.
+
+[2025-08-20 13:44:12] AVIAO [016]: Iniciando procedimento de desembarque.
+[2025-08-20 13:44:13] AVIAO [010]: Desembarque concluido. Recursos liberados.
+
+[2025-08-20 13:44:13] AVIAO [010]: Iniciando procedimento de decolagem.
+[2025-08-20 13:44:13] AVIÃO [027] (Doméstico) criado e se aproximando do aeroporto.
+[2025-08-20 13:44:13] AVIAO [027]: Iniciando procedimento de pouso.
+[2025-08-20 13:44:14] AVIAO [017]: Pouso concluido. Recursos liberados.
+
+[2025-08-20 13:44:14] AVIAO [017]: Iniciando procedimento de desembarque.
+[2025-08-20 13:44:14] AVIAO [018]: Desembarque de passageiros em andamento (3 segundos).
+[2025-08-20 13:44:14] AVIAO [005]: Decolagem em andamento (2 segundos).
+[2025-08-20 13:44:16] AVIAO [005]: Decolagem concluida. Recursos liberados.
+
+[2025-08-20 13:44:16] AVIAO [005]: Todas as operacoes foram concluidas com sucesso.
+[2025-08-20 13:44:16] AVIAO [019]: Pouso em andamento (2 segundos).
+[2025-08-20 13:44:16] AVIÃO [028] (Doméstico) criado e se aproximando do aeroporto.
+[2025-08-20 13:44:16] AVIAO [028]: Iniciando procedimento de pouso.
+[2025-08-20 13:44:17] AVIAO [012]: Desembarque de passageiros em andamento (3 segundos).
+[2025-08-20 13:44:18] AVIAO [018]: Desembarque concluido. Recursos liberados.
+
+[2025-08-20 13:44:18] AVIAO [018]: Iniciando procedimento de decolagem.
+[2025-08-20 13:44:18] AVIÃO [029] (Doméstico) criado e se aproximando do aeroporto.
+[2025-08-20 13:44:18] AVIAO [029]: Iniciando procedimento de pouso.
+[2025-08-20 13:44:18] AVIAO [019]: Pouso concluido. Recursos liberados.
+
+[2025-08-20 13:44:18] AVIAO [019]: Iniciando procedimento de desembarque.
+[2025-08-20 13:44:20] AVIÃO [030] (Doméstico) criado e se aproximando do aeroporto.
+[2025-08-20 13:44:20] AVIAO [030]: Iniciando procedimento de pouso.
+[2025-08-20 13:44:21] AVIAO [012]: Desembarque concluido. Recursos liberados.
+
+[2025-08-20 13:44:21] AVIAO [014]: Desembarque de passageiros em andamento (3 segundos).
+[2025-08-20 13:44:21] AVIAO [012]: Iniciando procedimento de decolagem.
+[2025-08-20 13:44:21] AVIÃO [031] (Internacional) criado e se aproximando do aeroporto.
+[2025-08-20 13:44:21] AVIAO [031]: Iniciando procedimento de pouso.
+[2025-08-20 13:44:23] AVIÃO [032] (Internacional) criado e se aproximando do aeroporto.
+[2025-08-20 13:44:23] AVIAO [032]: Iniciando procedimento de pouso.
+[2025-08-20 13:44:24] AVIAO [014]: Desembarque concluido. Recursos liberados.
+
+[2025-08-20 13:44:24] AVIAO [014]: Iniciando procedimento de decolagem.
+[2025-08-20 13:44:24] AVIÃO [033] (Doméstico) criado e se aproximando do aeroporto.
+[2025-08-20 13:44:24] AVIAO [033]: Iniciando procedimento de pouso.
+[2025-08-20 13:44:25] AVIÃO [034] (Doméstico) criado e se aproximando do aeroporto.
+[2025-08-20 13:44:25] AVIAO [034]: Iniciando procedimento de pouso.
+[2025-08-20 13:44:28] AVIÃO [035] (Doméstico) criado e se aproximando do aeroporto.
+[2025-08-20 13:44:28] AVIAO [035]: Iniciando procedimento de pouso.
+[2025-08-20 13:44:31] AVIÃO [036] (Internacional) criado e se aproximando do aeroporto.
+[2025-08-20 13:44:31] AVIAO [036]: Iniciando procedimento de pouso.
+[2025-08-20 13:44:32] AVIÃO [037] (Internacional) criado e se aproximando do aeroporto.
+[2025-08-20 13:44:32] AVIAO [037]: Iniciando procedimento de pouso.
+[2025-08-20 13:44:33] AVIÃO [038] (Doméstico) criado e se aproximando do aeroporto.
+[2025-08-20 13:44:33] AVIAO [038]: Iniciando procedimento de pouso.
+[2025-08-20 13:44:35] AVIÃO [039] (Internacional) criado e se aproximando do aeroporto.
+[2025-08-20 13:44:35] AVIAO [039]: Iniciando procedimento de pouso.
+[2025-08-20 13:44:36] AVIÃO [040] (Doméstico) criado e se aproximando do aeroporto.
+[2025-08-20 13:44:36] AVIAO [040]: Iniciando procedimento de pouso.
+[2025-08-20 13:44:35] AVIÃO [041] (Internacional) criado e se aproximando do aeroporto.
+[2025-08-20 13:44:35] AVIAO [041]: Iniciando procedimento de pouso.
+[2025-08-20 13:44:37] AVIÃO [042] (Internacional) criado e se aproximando do aeroporto.
+[2025-08-20 13:44:37] AVIAO [042]: Iniciando procedimento de pouso.
+[2025-08-20 13:44:38] AVIÃO [009] recebeu boost de prioridade (espera: 31 seg)
+[2025-08-20 13:44:38] AVIÃO [023] recebeu boost de prioridade (espera: 31 seg)
+[2025-08-20 13:44:39] AVIÃO [043] (Internacional) criado e se aproximando do aeroporto.
+[2025-08-20 13:44:39] AVIAO [043]: Iniciando procedimento de pouso.
+[2025-08-20 13:44:39] AVIÃO [009] recebeu boost de prioridade (espera: 32 seg)
+[2025-08-20 13:44:39] AVIÃO [023] recebeu boost de prioridade (espera: 32 seg)
+[2025-08-20 13:44:39] AVIÃO [022] recebeu boost de prioridade (espera: 31 seg)
+[2025-08-20 13:44:39] AVIÃO [020] recebeu boost de prioridade (espera: 31 seg)
+[2025-08-20 13:44:40] AVIÃO [009] recebeu boost de prioridade (espera: 33 seg)
+[2025-08-20 13:44:40] AVIÃO [023] recebeu boost de prioridade (espera: 33 seg)
+[2025-08-20 13:44:40] AVIÃO [022] recebeu boost de prioridade (espera: 32 seg)
+[2025-08-20 13:44:40] AVIÃO [020] recebeu boost de prioridade (espera: 32 seg)
+[2025-08-20 13:44:40] AVIÃO [024] recebeu boost de prioridade (espera: 31 seg)
+[2025-08-20 13:44:41] AVIÃO [044] (Internacional) criado e se aproximando do aeroporto.
+[2025-08-20 13:44:41] AVIAO [044]: Iniciando procedimento de pouso.
+[2025-08-20 13:44:41] AVIÃO [009] recebeu boost de prioridade (espera: 34 seg)
+[2025-08-20 13:44:41] AVIÃO [023] recebeu boost de prioridade (espera: 34 seg)
+[2025-08-20 13:44:41] AVIÃO [022] recebeu boost de prioridade (espera: 33 seg)
+[2025-08-20 13:44:41] AVIÃO [020] recebeu boost de prioridade (espera: 33 seg)
+[2025-08-20 13:44:41] AVIÃO [024] recebeu boost de prioridade (espera: 32 seg)
+[2025-08-20 13:44:41] AVIÃO [021] recebeu boost de prioridade (espera: 31 seg)
+[2025-08-20 13:44:42] AVIÃO [009] recebeu boost de prioridade (espera: 35 seg)
+[2025-08-20 13:44:42] AVIÃO [023] recebeu boost de prioridade (espera: 35 seg)
+[2025-08-20 13:44:42] AVIÃO [022] recebeu boost de prioridade (espera: 34 seg)
+[2025-08-20 13:44:42] AVIÃO [020] recebeu boost de prioridade (espera: 34 seg)
+[2025-08-20 13:44:42] AVIÃO [024] recebeu boost de prioridade (espera: 33 seg)
+[2025-08-20 13:44:42] AVIÃO [021] recebeu boost de prioridade (espera: 32 seg)
+[2025-08-20 13:44:42] AVIÃO [025] recebeu boost de prioridade (espera: 31 seg)
+[2025-08-20 13:44:43] AVIÃO [045] (Internacional) criado e se aproximando do aeroporto.
+[2025-08-20 13:44:43] AVIAO [045]: Iniciando procedimento de pouso.
+[2025-08-20 13:44:43] AVIÃO [009] recebeu boost de prioridade (espera: 36 seg)
+[2025-08-20 13:44:43] AVIÃO [023] recebeu boost de prioridade (espera: 36 seg)
+[2025-08-20 13:44:43] AVIÃO [022] recebeu boost de prioridade (espera: 35 seg)
+[2025-08-20 13:44:43] AVIÃO [020] recebeu boost de prioridade (espera: 35 seg)
+[2025-08-20 13:44:43] AVIÃO [024] recebeu boost de prioridade (espera: 34 seg)
+[2025-08-20 13:44:43] AVIÃO [021] recebeu boost de prioridade (espera: 33 seg)
+[2025-08-20 13:44:43] AVIÃO [025] recebeu boost de prioridade (espera: 32 seg)
+[2025-08-20 13:44:43] AVIÃO [026] recebeu boost de prioridade (espera: 31 seg)
+[2025-08-20 13:44:43] AVIÃO [016] recebeu boost de prioridade (espera: 31 seg)
+[2025-08-20 13:44:44] AVIÃO [009] recebeu boost de prioridade (espera: 37 seg)
+[2025-08-20 13:44:44] AVIÃO [023] recebeu boost de prioridade (espera: 37 seg)
+[2025-08-20 13:44:44] AVIÃO [022] recebeu boost de prioridade (espera: 36 seg)
+[2025-08-20 13:44:44] AVIÃO [020] recebeu boost de prioridade (espera: 36 seg)
+[2025-08-20 13:44:44] AVIÃO [024] recebeu boost de prioridade (espera: 35 seg)
+[2025-08-20 13:44:44] AVIÃO [021] recebeu boost de prioridade (espera: 34 seg)
+[2025-08-20 13:44:44] AVIÃO [025] recebeu boost de prioridade (espera: 33 seg)
+[2025-08-20 13:44:44] AVIÃO [026] recebeu boost de prioridade (espera: 32 seg)
+[2025-08-20 13:44:44] AVIÃO [016] recebeu boost de prioridade (espera: 32 seg)
+[2025-08-20 13:44:44] AVIÃO [010] recebeu boost de prioridade (espera: 31 seg)
+[2025-08-20 13:44:44] AVIÃO [027] recebeu boost de prioridade (espera: 31 seg)
+[2025-08-20 13:44:45] AVIÃO [009] recebeu boost de prioridade (espera: 38 seg)
+[2025-08-20 13:44:45] AVIÃO [023] recebeu boost de prioridade (espera: 38 seg)
+[2025-08-20 13:44:45] AVIÃO [022] recebeu boost de prioridade (espera: 37 seg)
+[2025-08-20 13:44:45] AVIÃO [020] recebeu boost de prioridade (espera: 37 seg)
+[2025-08-20 13:44:45] AVIÃO [024] recebeu boost de prioridade (espera: 36 seg)
+[2025-08-20 13:44:45] AVIÃO [021] recebeu boost de prioridade (espera: 35 seg)
+[2025-08-20 13:44:45] AVIÃO [025] recebeu boost de prioridade (espera: 34 seg)
+[2025-08-20 13:44:45] AVIÃO [026] recebeu boost de prioridade (espera: 33 seg)
+[2025-08-20 13:44:45] AVIÃO [016] recebeu boost de prioridade (espera: 33 seg)
+[2025-08-20 13:44:45] AVIÃO [010] recebeu boost de prioridade (espera: 32 seg)
+[2025-08-20 13:44:45] AVIÃO [027] recebeu boost de prioridade (espera: 32 seg)
+[2025-08-20 13:44:45] AVIÃO [017] recebeu boost de prioridade (espera: 31 seg)
+[2025-08-20 13:44:46] AVIÃO [046] (Internacional) criado e se aproximando do aeroporto.
+[2025-08-20 13:44:46] AVIAO [046]: Iniciando procedimento de pouso.
+[2025-08-20 13:44:46] AVIÃO [009] recebeu boost de prioridade (espera: 39 seg)
+[2025-08-20 13:44:46] AVIÃO [023] recebeu boost de prioridade (espera: 39 seg)
+[2025-08-20 13:44:46] AVIÃO [022] recebeu boost de prioridade (espera: 38 seg)
+[2025-08-20 13:44:46] AVIÃO [020] recebeu boost de prioridade (espera: 38 seg)
+[2025-08-20 13:44:46] AVIÃO [024] recebeu boost de prioridade (espera: 37 seg)
+[2025-08-20 13:44:46] AVIÃO [021] recebeu boost de prioridade (espera: 36 seg)
+[2025-08-20 13:44:46] AVIÃO [025] recebeu boost de prioridade (espera: 35 seg)
+[2025-08-20 13:44:46] AVIÃO [026] recebeu boost de prioridade (espera: 34 seg)
+[2025-08-20 13:44:46] AVIÃO [016] recebeu boost de prioridade (espera: 34 seg)
+[2025-08-20 13:44:46] AVIÃO [010] recebeu boost de prioridade (espera: 33 seg)
+[2025-08-20 13:44:46] AVIÃO [027] recebeu boost de prioridade (espera: 33 seg)
+[2025-08-20 13:44:46] AVIÃO [017] recebeu boost de prioridade (espera: 32 seg)
+[2025-08-20 13:44:47] AVIÃO [047] (Doméstico) criado e se aproximando do aeroporto.
+[2025-08-20 13:44:47] AVIAO [047]: Iniciando procedimento de pouso.
+[2025-08-20 13:44:48] AVIÃO [009] recebeu boost de prioridade (espera: 41 seg)
+[2025-08-20 13:44:48] AVIÃO [023] recebeu boost de prioridade (espera: 41 seg)
+[2025-08-20 13:44:48] AVIÃO [022] recebeu boost de prioridade (espera: 40 seg)
+[2025-08-20 13:44:48] AVIÃO [020] recebeu boost de prioridade (espera: 40 seg)
+[2025-08-20 13:44:48] AVIÃO [024] recebeu boost de prioridade (espera: 39 seg)
+[2025-08-20 13:44:48] AVIÃO [021] recebeu boost de prioridade (espera: 38 seg)
+[2025-08-20 13:44:48] AVIÃO [025] recebeu boost de prioridade (espera: 37 seg)
+[2025-08-20 13:44:48] AVIÃO [026] recebeu boost de prioridade (espera: 36 seg)
+[2025-08-20 13:44:48] AVIÃO [016] recebeu boost de prioridade (espera: 36 seg)
+[2025-08-20 13:44:48] AVIÃO [010] recebeu boost de prioridade (espera: 35 seg)
+[2025-08-20 13:44:48] AVIÃO [027] recebeu boost de prioridade (espera: 35 seg)
+[2025-08-20 13:44:48] AVIÃO [017] recebeu boost de prioridade (espera: 34 seg)
+[2025-08-20 13:44:48] AVIÃO [028] recebeu boost de prioridade (espera: 32 seg)
+[2025-08-20 13:44:48] AVIÃO [048] (Doméstico) criado e se aproximando do aeroporto.
+[2025-08-20 13:44:48] AVIAO [048]: Iniciando procedimento de pouso.
+[2025-08-20 13:44:49] AVIÃO [006] recebeu boost de prioridade (espera: 31 seg)
+[2025-08-20 13:44:49] AVIÃO [009] recebeu boost de prioridade (espera: 42 seg)
+[2025-08-20 13:44:49] AVIÃO [023] recebeu boost de prioridade (espera: 42 seg)
+[2025-08-20 13:44:49] AVIÃO [022] recebeu boost de prioridade (espera: 41 seg)
+[2025-08-20 13:44:49] AVIÃO [020] recebeu boost de prioridade (espera: 41 seg)
+[2025-08-20 13:44:49] AVIÃO [024] recebeu boost de prioridade (espera: 40 seg)
+[2025-08-20 13:44:49] AVIÃO [021] recebeu boost de prioridade (espera: 39 seg)
+[2025-08-20 13:44:49] AVIÃO [025] recebeu boost de prioridade (espera: 38 seg)
+[2025-08-20 13:44:49] AVIÃO [026] recebeu boost de prioridade (espera: 37 seg)
+[2025-08-20 13:44:49] AVIÃO [016] recebeu boost de prioridade (espera: 37 seg)
+[2025-08-20 13:44:49] AVIÃO [010] recebeu boost de prioridade (espera: 36 seg)
+[2025-08-20 13:44:49] AVIÃO [027] recebeu boost de prioridade (espera: 36 seg)
+[2025-08-20 13:44:49] AVIÃO [017] recebeu boost de prioridade (espera: 35 seg)
+[2025-08-20 13:44:49] AVIÃO [028] recebeu boost de prioridade (espera: 33 seg)
+[2025-08-20 13:44:49] AVIÃO [018] recebeu boost de prioridade (espera: 31 seg)
+[2025-08-20 13:44:49] AVIÃO [029] recebeu boost de prioridade (espera: 31 seg)
+[2025-08-20 13:44:49] AVIÃO [019] recebeu boost de prioridade (espera: 31 seg)
+[2025-08-20 13:44:49] AVIÃO [049] (Internacional) criado e se aproximando do aeroporto.
+[2025-08-20 13:44:49] AVIAO [049]: Iniciando procedimento de pouso.
+[2025-08-20 13:44:50] AVIÃO [006] recebeu boost de prioridade (espera: 32 seg)
+[2025-08-20 13:44:50] AVIÃO [009] recebeu boost de prioridade (espera: 43 seg)
+[2025-08-20 13:44:50] AVIÃO [023] recebeu boost de prioridade (espera: 43 seg)
+[2025-08-20 13:44:50] AVIÃO [022] recebeu boost de prioridade (espera: 42 seg)
+[2025-08-20 13:44:50] AVIÃO [020] recebeu boost de prioridade (espera: 42 seg)
+[2025-08-20 13:44:50] AVIÃO [024] recebeu boost de prioridade (espera: 41 seg)
+[2025-08-20 13:44:50] AVIÃO [021] recebeu boost de prioridade (espera: 40 seg)
+[2025-08-20 13:44:50] AVIÃO [025] recebeu boost de prioridade (espera: 39 seg)
+[2025-08-20 13:44:50] AVIÃO [026] recebeu boost de prioridade (espera: 38 seg)
+[2025-08-20 13:44:50] AVIÃO [016] recebeu boost de prioridade (espera: 38 seg)
+[2025-08-20 13:44:50] AVIÃO [010] recebeu boost de prioridade (espera: 37 seg)
+[2025-08-20 13:44:50] AVIÃO [027] recebeu boost de prioridade (espera: 37 seg)
+[2025-08-20 13:44:50] AVIÃO [017] recebeu boost de prioridade (espera: 36 seg)
+[2025-08-20 13:44:50] AVIÃO [028] recebeu boost de prioridade (espera: 34 seg)
+[2025-08-20 13:44:50] AVIÃO [018] recebeu boost de prioridade (espera: 32 seg)
+[2025-08-20 13:44:50] AVIÃO [029] recebeu boost de prioridade (espera: 32 seg)
+[2025-08-20 13:44:50] AVIÃO [019] recebeu boost de prioridade (espera: 32 seg)
+[2025-08-20 13:44:51] AVIÃO [006] recebeu boost de prioridade (espera: 33 seg)
+[2025-08-20 13:44:51] AVIÃO [009] recebeu boost de prioridade (espera: 44 seg)
+[2025-08-20 13:44:51] AVIÃO [023] recebeu boost de prioridade (espera: 44 seg)
+[2025-08-20 13:44:51] AVIÃO [022] recebeu boost de prioridade (espera: 43 seg)
+[2025-08-20 13:44:51] AVIÃO [020] recebeu boost de prioridade (espera: 43 seg)
+[2025-08-20 13:44:51] AVIÃO [024] recebeu boost de prioridade (espera: 42 seg)
+[2025-08-20 13:44:51] AVIÃO [021] recebeu boost de prioridade (espera: 41 seg)
+[2025-08-20 13:44:51] AVIÃO [025] recebeu boost de prioridade (espera: 40 seg)
+[2025-08-20 13:44:51] AVIÃO [026] recebeu boost de prioridade (espera: 39 seg)
+[2025-08-20 13:44:51] AVIÃO [016] recebeu boost de prioridade (espera: 39 seg)
+[2025-08-20 13:44:51] AVIÃO [010] recebeu boost de prioridade (espera: 38 seg)
+[2025-08-20 13:44:51] AVIÃO [027] recebeu boost de prioridade (espera: 38 seg)
+[2025-08-20 13:44:51] AVIÃO [017] recebeu boost de prioridade (espera: 37 seg)
+[2025-08-20 13:44:51] AVIÃO [028] recebeu boost de prioridade (espera: 35 seg)
+[2025-08-20 13:44:51] AVIÃO [018] recebeu boost de prioridade (espera: 33 seg)
+[2025-08-20 13:44:51] AVIÃO [029] recebeu boost de prioridade (espera: 33 seg)
+[2025-08-20 13:44:51] AVIÃO [019] recebeu boost de prioridade (espera: 33 seg)
+[2025-08-20 13:44:51] AVIÃO [030] recebeu boost de prioridade (espera: 31 seg)
+[2025-08-20 13:44:51] AVIÃO [050] (Internacional) criado e se aproximando do aeroporto.
+[2025-08-20 13:44:51] AVIAO [050]: Iniciando procedimento de pouso.
+[2025-08-20 13:44:52] AVIÃO [006] recebeu boost de prioridade (espera: 34 seg)
+[2025-08-20 13:44:52] AVIÃO [031] recebeu boost de prioridade (espera: 31 seg)
+[2025-08-20 13:44:52] AVIÃO [009] recebeu boost de prioridade (espera: 45 seg)
+[2025-08-20 13:44:52] AVIÃO [023] recebeu boost de prioridade (espera: 45 seg)
+[2025-08-20 13:44:52] AVIÃO [022] recebeu boost de prioridade (espera: 44 seg)
+[2025-08-20 13:44:52] AVIÃO [020] recebeu boost de prioridade (espera: 44 seg)
+[2025-08-20 13:44:52] AVIÃO [024] recebeu boost de prioridade (espera: 43 seg)
+[2025-08-20 13:44:52] AVIÃO [021] recebeu boost de prioridade (espera: 42 seg)
+[2025-08-20 13:44:52] AVIÃO [025] recebeu boost de prioridade (espera: 41 seg)
+[2025-08-20 13:44:52] AVIÃO [026] recebeu boost de prioridade (espera: 40 seg)
+[2025-08-20 13:44:52] AVIÃO [016] recebeu boost de prioridade (espera: 40 seg)
+[2025-08-20 13:44:52] AVIÃO [010] recebeu boost de prioridade (espera: 39 seg)
+[2025-08-20 13:44:52] AVIÃO [027] recebeu boost de prioridade (espera: 39 seg)
+[2025-08-20 13:44:52] AVIÃO [017] recebeu boost de prioridade (espera: 38 seg)
+[2025-08-20 13:44:52] AVIÃO [028] recebeu boost de prioridade (espera: 36 seg)
+[2025-08-20 13:44:52] AVIÃO [018] recebeu boost de prioridade (espera: 34 seg)
+[2025-08-20 13:44:52] AVIÃO [029] recebeu boost de prioridade (espera: 34 seg)
+[2025-08-20 13:44:52] AVIÃO [019] recebeu boost de prioridade (espera: 34 seg)
+[2025-08-20 13:44:52] AVIÃO [030] recebeu boost de prioridade (espera: 32 seg)
+[2025-08-20 13:44:52] AVIÃO [012] recebeu boost de prioridade (espera: 31 seg)
+[2025-08-20 13:44:53] AVIÃO [006] recebeu boost de prioridade (espera: 35 seg)
+[2025-08-20 13:44:53] AVIÃO [031] recebeu boost de prioridade (espera: 32 seg)
+[2025-08-20 13:44:53] AVIÃO [009] recebeu boost de prioridade (espera: 46 seg)
+[2025-08-20 13:44:53] AVIÃO [023] recebeu boost de prioridade (espera: 46 seg)
+[2025-08-20 13:44:53] AVIÃO [022] recebeu boost de prioridade (espera: 45 seg)
+[2025-08-20 13:44:53] AVIÃO [020] recebeu boost de prioridade (espera: 45 seg)
+[2025-08-20 13:44:53] AVIÃO [024] recebeu boost de prioridade (espera: 44 seg)
+[2025-08-20 13:44:53] AVIÃO [021] recebeu boost de prioridade (espera: 43 seg)
+[2025-08-20 13:44:53] AVIÃO [025] recebeu boost de prioridade (espera: 42 seg)
+[2025-08-20 13:44:53] AVIÃO [026] recebeu boost de prioridade (espera: 41 seg)
+[2025-08-20 13:44:53] AVIÃO [016] recebeu boost de prioridade (espera: 41 seg)
+[2025-08-20 13:44:53] AVIÃO [010] recebeu boost de prioridade (espera: 40 seg)
+[2025-08-20 13:44:53] AVIÃO [027] recebeu boost de prioridade (espera: 40 seg)
+[2025-08-20 13:44:53] AVIÃO [017] recebeu boost de prioridade (espera: 39 seg)
+[2025-08-20 13:44:53] AVIÃO [028] recebeu boost de prioridade (espera: 37 seg)
+[2025-08-20 13:44:53] AVIÃO [018] recebeu boost de prioridade (espera: 35 seg)
+[2025-08-20 13:44:53] AVIÃO [029] recebeu boost de prioridade (espera: 35 seg)
+[2025-08-20 13:44:53] AVIÃO [019] recebeu boost de prioridade (espera: 35 seg)
+[2025-08-20 13:44:53] AVIÃO [030] recebeu boost de prioridade (espera: 33 seg)
+[2025-08-20 13:44:53] AVIÃO [012] recebeu boost de prioridade (espera: 32 seg)
+[2025-08-20 13:44:53] 
+LIMITE DE AVIÕES ATINGIDO! Aguardando os existentes finalizarem...
+[2025-08-20 13:45:38] AVIAO [023]: Falha ao obter recursos para pouso. Abortando.
+[2025-08-20 13:45:39] AVIAO [020]: Falha ao obter recursos para desembarque. Abortando.
+[2025-08-20 13:45:39] AVIAO [022]: Falha ao obter recursos para pouso. Abortando.
+[2025-08-20 13:45:40] AVIAO [024]: Falha ao obter recursos para pouso. Abortando.
+[2025-08-20 13:45:41] AVIAO [021]: Falha ao obter recursos para desembarque. Abortando.
+[2025-08-20 13:45:41] AVIAO [025]: Falha ao obter recursos para pouso. Abortando.
+[2025-08-20 13:45:41] AVIAO [009]: Falha ao obter recursos para decolagem. Abortando.
+[2025-08-20 13:45:42] AVIAO [026]: Falha ao obter recursos para pouso. Abortando.
+[2025-08-20 13:45:42] AVIAO [006]: Decolagem em andamento (2 segundos).
+[2025-08-20 13:45:43] AVIAO [010]: Falha ao obter recursos para decolagem. Abortando.
+[2025-08-20 13:45:43] AVIAO [016]: Falha ao obter recursos para desembarque. Abortando.
+[2025-08-20 13:45:44] AVIAO [006]: Decolagem concluida. Recursos liberados.
+
+[2025-08-20 13:45:44] AVIAO [006]: Todas as operacoes foram concluidas com sucesso.
+[2025-08-20 13:45:44] AVIAO [027]: Falha ao obter recursos para pouso. Abortando.
+[2025-08-20 13:45:45] AVIAO [017]: Falha ao obter recursos para desembarque. Abortando.
+[2025-08-20 13:45:47] AVIAO [028]: Falha ao obter recursos para pouso. Abortando.
+[2025-08-20 13:45:47] AVIAO [018]: Decolagem em andamento (2 segundos).
+[2025-08-20 13:45:49] AVIAO [019]: Falha ao obter recursos para desembarque. Abortando.
+[2025-08-20 13:45:49] AVIAO [029]: Falha ao obter recursos para pouso. Abortando.
+[2025-08-20 13:45:49] AVIAO [018]: Decolagem concluida. Recursos liberados.
+
+[2025-08-20 13:45:49] AVIAO [018]: Todas as operacoes foram concluidas com sucesso.
+[2025-08-20 13:45:49] AVIAO [007]: Decolagem em andamento (2 segundos).
+[2025-08-20 13:45:51] AVIAO [012]: Falha ao obter recursos para decolagem. Abortando.
+[2025-08-20 13:45:51] AVIAO [007]: Decolagem concluida. Recursos liberados.
+
+[2025-08-20 13:45:51] AVIAO [007]: Todas as operacoes foram concluidas com sucesso.
+[2025-08-20 13:45:56] AVIAO [034]: Falha ao obter recursos para pouso. Abortando.
+[2025-08-20 13:45:57] AVIAO [033]: Falha ao obter recursos para pouso. Abortando.
+[2025-08-20 13:46:02] AVIAO [035]: Falha ao obter recursos para pouso. Abortando.
+[2025-08-20 13:46:03] AVIAO [037]: Falha ao obter recursos para pouso. Abortando.
+[2025-08-20 13:46:04] AVIAO [038]: Falha ao obter recursos para pouso. Abortando.
+[2025-08-20 13:46:06] AVIAO [041]: Falha ao obter recursos para pouso. Abortando.
+[2025-08-20 13:46:08] AVIAO [042]: Falha ao obter recursos para pouso. Abortando.
+[2025-08-20 13:46:09] AVIAO [039]: Falha ao obter recursos para pouso. Abortando.
+[2025-08-20 13:46:10] AVIAO [040]: Falha ao obter recursos para pouso. Abortando.
+[2025-08-20 13:46:10] AVIAO [043]: Falha ao obter recursos para pouso. Abortando.
+[2025-08-20 13:46:14] AVIAO [045]: Falha ao obter recursos para pouso. Abortando.
+[2025-08-20 13:46:15] AVIAO [044]: Falha ao obter recursos para pouso. Abortando.
+[2025-08-20 13:46:16] AVIAO [046]: Falha ao obter recursos para pouso. Abortando.
+[2025-08-20 13:46:18] AVIAO [048]: Falha ao obter recursos para pouso. Abortando.
+[2025-08-20 13:46:18] AVIAO [047]: Falha ao obter recursos para pouso. Abortando.
+[2025-08-20 13:46:21] AVIAO [050]: Falha ao obter recursos para pouso. Abortando.
+[2025-08-20 13:46:21] AVIAO [049]: Falha ao obter recursos para pouso. Abortando.
+[2025-08-20 13:47:12] AVIAO [031]: Falha ao obter recursos para pouso. Abortando.
+[2025-08-20 13:47:12] AVIAO [030]: Pouso em andamento (2 segundos).
+[2025-08-20 13:47:14] AVIAO [030]: Pouso concluido. Recursos liberados.
+
+[2025-08-20 13:47:14] AVIAO [030]: Iniciando procedimento de desembarque.
+[2025-08-20 13:47:14] AVIAO [032]: Pouso em andamento (2 segundos).
+[2025-08-20 13:47:14] AVIAO [014]: Decolagem em andamento (2 segundos).
+[2025-08-20 13:47:16] AVIAO [014]: Decolagem concluida. Recursos liberados.
+
+[2025-08-20 13:47:16] AVIAO [014]: Todas as operacoes foram concluidas com sucesso.
+[2025-08-20 13:47:16] AVIAO [036]: Pouso em andamento (2 segundos).
+[2025-08-20 13:47:17] AVIAO [032]: Pouso concluido. Recursos liberados.
+
+[2025-08-20 13:47:17] AVIAO [032]: Iniciando procedimento de desembarque.
+[2025-08-20 13:47:17] AVIAO [030]: Desembarque de passageiros em andamento (3 segundos).
+[2025-08-20 13:47:18] AVIAO [036]: Pouso concluido. Recursos liberados.
+
+[2025-08-20 13:47:18] AVIAO [036]: Iniciando procedimento de desembarque.
+[2025-08-20 13:47:18] AVIAO [032]: Desembarque de passageiros em andamento (3 segundos).
+[2025-08-20 13:47:20] AVIAO [036]: Desembarque de passageiros em andamento (3 segundos).
+[2025-08-20 13:47:20] AVIAO [030]: Desembarque concluido. Recursos liberados.
+
+[2025-08-20 13:47:20] AVIAO [030]: Iniciando procedimento de decolagem.
+[2025-08-20 13:47:22] AVIAO [030]: Decolagem em andamento (2 segundos).
+[2025-08-20 13:47:22] AVIAO [032]: Desembarque concluido. Recursos liberados.
+
+[2025-08-20 13:47:22] AVIAO [032]: Iniciando procedimento de decolagem.
+[2025-08-20 13:47:23] AVIAO [032]: Decolagem em andamento (2 segundos).
+[2025-08-20 13:47:23] AVIAO [036]: Desembarque concluido. Recursos liberados.
+
+[2025-08-20 13:47:23] AVIAO [036]: Iniciando procedimento de decolagem.
+[2025-08-20 13:47:24] AVIAO [030]: Decolagem concluida. Recursos liberados.
+
+[2025-08-20 13:47:24] AVIAO [030]: Todas as operacoes foram concluidas com sucesso.
+[2025-08-20 13:47:24] AVIAO [036]: Decolagem em andamento (2 segundos).
+[2025-08-20 13:47:25] AVIAO [032]: Decolagem concluida. Recursos liberados.
+
+[2025-08-20 13:47:25] AVIAO [032]: Todas as operacoes foram concluidas com sucesso.
+[2025-08-20 13:47:26] AVIAO [036]: Decolagem concluida. Recursos liberados.
+
+[2025-08-20 13:47:26] AVIAO [036]: Todas as operacoes foram concluidas com sucesso.
+[2025-08-20 13:47:26] 
+SIMULAÇÃO FINALIZADA! Todos os aviões concluíram suas operações.
+
+--- Fim do Log ---

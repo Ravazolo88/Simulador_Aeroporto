@@ -91,12 +91,23 @@ void atualizar_prioridades(fila_prioridade_t* fila) {
     
     while (atual != NULL) {
         time_t tempo_espera = agora - atual->tempo_chegada;
-        if (tempo_espera > 0 && tempo_espera % AGING_INTERVAL == 0) {
-            atual->prioridade_atual += AGING_INCREMENT;
+        
+        // Aging mais agressivo baseado no tempo de espera
+        if (tempo_espera > 10) { // Após 10 segundos
+            atual->prioridade_atual += (tempo_espera / 5) * 2; // +2 a cada 5 segundos
         }
+        
+        // Boost extra para aviões que estão esperando há muito tempo
+        if (tempo_espera > ALERTA_CRITICO / 2) {
+            atual->prioridade_atual += 10;
+            log_message("AVIÃO [%03d] recebeu boost de prioridade (espera: %ld seg)\n", 
+                       atual->aviao->ID, tempo_espera);
+        }
+        
         atual = atual->next;
     }
     
+    // Reordena a fila após atualizar prioridades
     if (fila->head != NULL && fila->head->next != NULL) {
         request_node_t* sorted = NULL;
         request_node_t* current = fila->head;
@@ -119,10 +130,12 @@ void atualizar_prioridades(fila_prioridade_t* fila) {
         }
         fila->head = sorted;
     }
+    
     pthread_mutex_unlock(&fila->mutex);
 }
 
 void* thread_aging_func(void* arg) {
+    (void)arg; // Informa ao compilador que o parâmetro é intencionalmente não utilizado
     while (sistema_ativo) {
         atualizar_prioridades(&fila_pistas);
         atualizar_prioridades(&fila_portoes);

@@ -11,6 +11,9 @@
 #include <string.h>
 #include <errno.h>
 
+// Inclui o nosso novo cabeçalho de log
+#include "logger.h"
+
 // ---- DEFINIÇÃO DE TEMPOS (serão inicializados em main.c) -----
 extern int TEMPO_TOTAL;
 extern int ALERTA_CRITICO;
@@ -28,7 +31,7 @@ extern int NUM_OP_TORRES;
 #define PRIORIDADE_BASE_INTERNACIONAL 13
 #define AGING_INCREMENT 1
 #define AGING_INTERVAL 5
-#define MAX_DEADLOCK_WARNINGS 2
+#define MAX_DEADLOCK_WARNINGS 1000
 
 // -------------- STRUCTS --------------
 typedef enum {
@@ -154,4 +157,4 @@ bool aviao_tem_muitos_warnings(aviao_t* aviao);
 // Funções em relatorio.c
 void exibir_relatorio_final(aviao_t* avioes[], int total_avioes);
 
-#endif // AEROPORTO_H
+#endif
