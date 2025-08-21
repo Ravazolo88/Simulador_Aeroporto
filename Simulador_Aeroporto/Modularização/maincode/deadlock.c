@@ -110,7 +110,7 @@ void* thread_detectar_deadlock(void* arg) {
             
             realocar_recursos_avioes_warning();
         }
-        sleep(3);
+        sleep(5);
     }
     return NULL;
 }

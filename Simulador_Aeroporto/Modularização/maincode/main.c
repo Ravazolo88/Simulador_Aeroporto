@@ -87,7 +87,7 @@ int main(int argc, char* argv[]) {
                 limite_atingido = true;
             }
         }
-        sleep(rand() % 1 + 1);
+        usleep(rand() % 800000 + 500000);
     }
 
     sistema_ativo = false;

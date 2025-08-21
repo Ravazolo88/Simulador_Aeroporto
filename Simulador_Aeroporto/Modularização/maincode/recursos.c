@@ -1,8 +1,6 @@
 #include "aeroporto.h"
 
-// Função genérica para solicitar um recurso usando a fila de prioridade
-int solicitar_recurso_com_prioridade(fila_prioridade_t* fila, sem_t* sem_recurso, 
-                                     aviao_t* aviao, tipo_recurso tipo, const char* nome_recurso) {
+int solicitar_recurso_com_prioridade(fila_prioridade_t* fila, sem_t* sem_recurso, aviao_t* aviao, tipo_recurso tipo, const char* nome_recurso) {
     log_message("[RECURSO] Aviao [%03d] solicitou %s.\n", aviao->ID, nome_recurso);
     
     if (aviao->recursos_realocados && aviao->tipo == DOMESTICO) {
@@ -18,7 +16,6 @@ int solicitar_recurso_com_prioridade(fila_prioridade_t* fila, sem_t* sem_recurso
     
     time_t tempo_inicio_espera = time(NULL);
     
-    // Aguarda até ser o próximo na fila de prioridade
     while (1) {
         pthread_mutex_lock(&fila->mutex);
         request_node_t* proximo = fila->head;
@@ -104,8 +101,7 @@ int solicitar_recurso_com_prioridade(fila_prioridade_t* fila, sem_t* sem_recurso
     }
 }
 
-void liberar_recurso_com_prioridade(fila_prioridade_t* fila, sem_t* sem_recurso, 
-                                   aviao_t* aviao, const char* nome_recurso) {
+void liberar_recurso_com_prioridade(fila_prioridade_t* fila, sem_t* sem_recurso, aviao_t* aviao, const char* nome_recurso) {
     log_message("[RECURSO] Aviao [%03d] liberou %s.\n", aviao->ID, nome_recurso);
     sem_post(sem_recurso);
     
@@ -116,7 +112,6 @@ void liberar_recurso_com_prioridade(fila_prioridade_t* fila, sem_t* sem_recurso,
     pthread_mutex_unlock(&fila->mutex);
 }
 
-// Funções específicas para cada recurso
 int solicitar_pista(aviao_t *aviao) {
     return solicitar_recurso_com_prioridade(&fila_pistas, &sem_pistas, aviao, RECURSO_PISTA, "PISTA");
 }

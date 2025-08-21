@@ -3,7 +3,7 @@
 void *rotina_aviao(void *arg) {
     aviao_t *aviao = (aviao_t *)arg;
 
-    // --- 1. POUSO ---
+    // --------------------------------- POUSO ---------------------------------
     log_message("[AVIAO %03d] Iniciando procedimento de pouso.\n", aviao->ID);
     pthread_mutex_lock(&mutex_lista_avioes);
     aviao->estado = POUSANDO;
@@ -18,7 +18,7 @@ void *rotina_aviao(void *arg) {
     liberar_pouso(aviao);
     log_message("[AVIAO %03d] Pouso concluido. Recursos liberados.\n", aviao->ID);
 
-    // --- 2. DESEMBARQUE ---
+    // ------------------------------- DESEMBARQUE -------------------------------
     log_message("[AVIAO %03d] Iniciando procedimento de desembarque.\n", aviao->ID);
     pthread_mutex_lock(&mutex_lista_avioes);
     aviao->estado = DESEMBARCANDO;
@@ -33,7 +33,7 @@ void *rotina_aviao(void *arg) {
     liberar_desembarque(aviao);
     log_message("[AVIAO %03d] Desembarque concluido. Recursos liberados.\n", aviao->ID);
 
-    // --- 3. DECOLAGEM ---
+    // -------------------------------- DECOLAGEM --------------------------------
     log_message("[AVIAO %03d] Iniciando procedimento de decolagem.\n", aviao->ID);
     pthread_mutex_lock(&mutex_lista_avioes);
     aviao->estado = DECOLANDO;
